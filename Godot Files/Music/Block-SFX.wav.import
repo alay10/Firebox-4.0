@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/Block-SFX.wav-65e4bcba8a925dffd9190519ce1b3d2a.sample"
+type="AudioStreamWAV"
+uid="uid://c0qscfehl767j"
+path="res://.godot/imported/Block-SFX.wav-65e4bcba8a925dffd9190519ce1b3d2a.sample"
 
 [deps]
 
 source_file="res://Music/Block-SFX.wav"
-dest_files=[ "res://.import/Block-SFX.wav-65e4bcba8a925dffd9190519ce1b3d2a.sample" ]
+dest_files=["res://.godot/imported/Block-SFX.wav-65e4bcba8a925dffd9190519ce1b3d2a.sample"]
 
 [params]
 

@@ -12,7 +12,7 @@ func _ready():
 
 func _pressed():
 	print("Button Pressed Main Menu")
-	get_tree().change_scene("res://MainMenu/Main Menu.tscn")
+	get_tree().change_scene_to_file("res://MainMenu/Main Menu.tscn")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

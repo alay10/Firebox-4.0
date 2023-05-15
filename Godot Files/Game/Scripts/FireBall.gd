@@ -7,20 +7,20 @@ var thrower
 # FireBall Initial Position
 var initial_position
 
-export(Vector2) var HitstunVec
-export(Vector2) var BlockstunVec
-export(int) var Hitstun
-export(int) var Blockstun
-export(int) var Damage
+@export var HitstunVec: Vector2
+@export var BlockstunVec: Vector2
+@export var Hitstun: int
+@export var Blockstun: int
+@export var Damage: int
 
-export(int) var fireBallDuration = 150
-export var fireBallSpeed = Vector2(17, 0)
+@export var fireBallDuration: int = 150
+@export var fireBallSpeed = Vector2(17, 0)
 
 func _ready():
 	
 	pass
 
-func init(position: Vector2, onLeft: bool, thrower: KinematicBody2D, color: Color):
+func init(position: Vector2, onLeft: bool, thrower: CharacterBody2D, color: Color):
 	
 	# just in case we change anything and need it
 	self.thrower = thrower
@@ -41,16 +41,16 @@ func init(position: Vector2, onLeft: bool, thrower: KinematicBody2D, color: Colo
 	# Set the collisions properly
 	if thrower.name == "P1":
 		# is a p1_mid_hitbox
-		set_collision_layer_bit(17, true)
+		set_collision_layer_value(17, true)
 		
 		# can be detected by p2_mid_hitbox and p2_mid_hurtbox
-		set_collision_mask_bit(20, true)
+		set_collision_mask_value(20, true)
 	else:
 		# is a p2_hitbox
-		set_collision_layer_bit(19, true)
+		set_collision_layer_value(19, true)
 		
 		# can be detected by p1_hitbox and p1_hurtbox
-		set_collision_mask_bit(18, true)
+		set_collision_mask_value(18, true)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

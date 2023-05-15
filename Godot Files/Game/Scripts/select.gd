@@ -1,7 +1,7 @@
 extends Control
 
-export (ShaderMaterial) var P1_Shader
-export (ShaderMaterial) var P2_Shader
+@export (ShaderMaterial) var P1_Shader
+@export (ShaderMaterial) var P2_Shader
 
 
 func _ready():
@@ -16,10 +16,10 @@ func _ready():
 func _process(delta):
 	
 	# Update Shader
-	P1_Shader.set_shader_param("headBand", Global.p1_headband_color)
-	P1_Shader.set_shader_param("body", Global.p1_body_color)
-	P2_Shader.set_shader_param("headBand", Global.p2_headband_color)
-	P2_Shader.set_shader_param("body", Global.p2_body_color)
+	P1_Shader.set_shader_parameter("headBand", Global.p1_headband_color)
+	P1_Shader.set_shader_parameter("body", Global.p1_body_color)
+	P2_Shader.set_shader_parameter("headBand", Global.p2_headband_color)
+	P2_Shader.set_shader_parameter("body", Global.p2_body_color)
 	pass
 		
 
@@ -43,4 +43,4 @@ func _on_P2_Body_Color_color_changed(color):
 
 # Start game
 func _on_Start_pressed():
-	get_tree().change_scene("res://Game/GameState_KinematicBodyRework.tscn")
+	get_tree().change_scene_to_file("res://Game/GameState_KinematicBodyRework.tscn")

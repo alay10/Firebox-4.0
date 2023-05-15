@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/Maybe_Parry-SFX.wav-4a379af2df32af2b76fcb72d25767dfb.sample"
+type="AudioStreamWAV"
+uid="uid://o2wnv2yvdc1o"
+path="res://.godot/imported/Maybe_Parry-SFX.wav-4a379af2df32af2b76fcb72d25767dfb.sample"
 
 [deps]
 
 source_file="res://Music/Maybe_Parry-SFX.wav"
-dest_files=[ "res://.import/Maybe_Parry-SFX.wav-4a379af2df32af2b76fcb72d25767dfb.sample" ]
+dest_files=["res://.godot/imported/Maybe_Parry-SFX.wav-4a379af2df32af2b76fcb72d25767dfb.sample"]
 
 [params]
 

@@ -1,9 +1,9 @@
 [gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Game/Pause.gd" type="Script" id=1]
-[ext_resource path="res://Fonts/Title_font.tres" type="DynamicFont" id=2]
-[ext_resource path="res://Fonts/Main Menu.tres" type="DynamicFont" id=3]
-[ext_resource path="res://Game/pause.png" type="Texture" id=4]
+[ext_resource path="res://Fonts/Title_font.tres" type="FontFile" id=2]
+[ext_resource path="res://Fonts/Main Menu.tres" type="FontFile" id=3]
+[ext_resource path="res://Game/pause.png" type="Texture2D" id=4]
 [ext_resource path="res://MainMenu/UI/Main Menu.tres" type="Theme" id=5]
 [ext_resource path="res://Game/Scripts/Pause.gd" type="Script" id=6]
 [ext_resource path="res://Game/Player.tscn" type="PackedScene" id=7]
@@ -16,14 +16,14 @@
 [ext_resource path="res://Game/HealthBar.tscn" type="PackedScene" id=14]
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 960.25, 400.438 )
+size = Vector2( 960.25, 400.438 )
 
 [sub_resource type="ImageTexture" id=1]
 
-[sub_resource type="DynamicFontData" id=5]
+[sub_resource type="FontFile" id=5]
 font_path = "res://Fonts/Minecraft.ttf"
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="FontFile" id=6]
 size = 50
 font_data = SubResource( 5 )
 
@@ -56,14 +56,14 @@ zoom = Vector2( 1.875, 1.8 )
 [node name="BKG" type="Node2D" parent="."]
 
 [node name="BlackRect" type="ColorRect" parent="BKG"]
-margin_right = 1920.0
-margin_bottom = 1049.0
+offset_right = 1920.0
+offset_bottom = 1049.0
 color = Color( 0, 0, 0, 1 )
 
 [node name="FloorRect" type="ColorRect" parent="BKG"]
-margin_top = 800.0
-margin_right = 1920.0
-margin_bottom = 1077.0
+offset_top = 800.0
+offset_right = 1920.0
+offset_bottom = 1077.0
 
 [node name="wallRight2" type="StaticBody2D" parent="."]
 position = Vector2( 1018, 1212 )
@@ -104,25 +104,25 @@ scale = Vector2( -3, 3 )
 shader = ExtResource( 13 )
 
 [node name="PauseButton" type="TextureButton" parent="UI"]
-margin_left = 1835.0
-margin_top = 35.0
-margin_right = 1887.0
-margin_bottom = 97.0
+offset_left = 1835.0
+offset_top = 35.0
+offset_right = 1887.0
+offset_bottom = 97.0
 texture_normal = SubResource( 1 )
 script = ExtResource( 6 )
 
-[node name="Pause" type="Sprite" parent="UI/PauseButton"]
+[node name="Pause" type="Sprite2D" parent="UI/PauseButton"]
 position = Vector2( 30, 45 )
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 4 )
 
 [node name="Display time" type="Label" parent="UI"]
-margin_left = 930.0
-margin_top = 50.0
-margin_right = 970.0
-margin_bottom = 101.0
+offset_left = 930.0
+offset_top = 50.0
+offset_right = 970.0
+offset_bottom = 101.0
 grow_horizontal = 2
-custom_fonts/font = SubResource( 6 )
+theme_override_fonts/font = SubResource( 6 )
 text = "0"
 align = 1
 script = ExtResource( 10 )
@@ -202,7 +202,7 @@ collision_mask = 1024
 layer = 20
 
 [node name="Pause" type="Control" parent="Pause_CanvasLayer"]
-pause_mode = 2
+process_mode = 2
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -217,65 +217,65 @@ color = Color( 0, 0, 0, 0.388235 )
 anchor_left = 0.5
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -320.0
-margin_top = 80.0
-margin_right = 320.0
-margin_bottom = -120.0
+offset_left = -320.0
+offset_top = 80.0
+offset_right = 320.0
+offset_bottom = -120.0
 
 [node name="Pause Menu" type="ColorRect" parent="Pause_CanvasLayer/Pause"]
 anchor_left = 0.5
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -300.0
-margin_top = 100.0
-margin_right = 300.0
-margin_bottom = -140.0
+offset_left = -300.0
+offset_top = 100.0
+offset_right = 300.0
+offset_bottom = -140.0
 color = Color( 0, 0, 0, 1 )
 
 [node name="HSlider" type="HSlider" parent="Pause_CanvasLayer/Pause/Pause Menu"]
-margin_left = 220.0
-margin_top = 156.0
-margin_right = 412.0
-margin_bottom = 196.0
+offset_left = 220.0
+offset_top = 156.0
+offset_right = 412.0
+offset_bottom = 196.0
 min_value = -80.0
 max_value = 0.0
 
 [node name="Label" type="Label" parent="Pause_CanvasLayer/Pause/Pause Menu"]
-margin_left = 160.0
-margin_top = 50.0
-margin_right = 460.0
-margin_bottom = 101.0
-custom_fonts/font = ExtResource( 2 )
+offset_left = 160.0
+offset_top = 50.0
+offset_right = 460.0
+offset_bottom = 101.0
+theme_override_fonts/font = ExtResource( 2 )
 text = "Pause menu"
 align = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Pause_CanvasLayer/Pause/Pause Menu"]
-margin_left = 160.0
-margin_top = 240.0
-margin_right = 460.0
-margin_bottom = 740.0
+offset_left = 160.0
+offset_top = 240.0
+offset_right = 460.0
+offset_bottom = 740.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource( 5 )
 
 [node name="Continue_Button" type="Button" parent="Pause_CanvasLayer/Pause/Pause Menu/VBoxContainer"]
-margin_right = 300.0
-margin_bottom = 36.0
-custom_fonts/font = ExtResource( 3 )
+offset_right = 300.0
+offset_bottom = 36.0
+theme_override_fonts/font = ExtResource( 3 )
 text = "Continue"
 
 [node name="Return_main" type="Button" parent="Pause_CanvasLayer/Pause/Pause Menu/VBoxContainer"]
-margin_top = 40.0
-margin_right = 300.0
-margin_bottom = 76.0
-custom_fonts/font = ExtResource( 3 )
+offset_top = 40.0
+offset_right = 300.0
+offset_bottom = 76.0
+theme_override_fonts/font = ExtResource( 3 )
 text = "Main Menu"
 
 [node name="Vol_text" type="Label" parent="Pause_CanvasLayer/Pause/Pause Menu"]
-margin_left = 220.0
-margin_top = 132.0
-margin_right = 412.0
-margin_bottom = 168.0
+offset_left = 220.0
+offset_top = 132.0
+offset_right = 412.0
+offset_bottom = 168.0
 text = "MASTER VOL"
 align = 1
 

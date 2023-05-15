@@ -1,8 +1,8 @@
-extends KinematicBody2D
+extends CharacterBody2D
 
 #setting the intial speed and gravity 
-export var speed = 40
-export var Gravity = 5
+@export var speed = 40
+@export var Gravity = 5
 
 #defines the 2d motion 
 var Motion = Vector2.ZERO
@@ -23,4 +23,7 @@ func _physics_process(delta):
 
 	#perform the movement in actual game 
 	Motion.y += Gravity
-	Motion = move_and_slide(Motion, Vector2.UP)
+	set_velocity(Motion)
+	set_up_direction(Vector2.UP)
+	move_and_slide()
+	Motion = velocity

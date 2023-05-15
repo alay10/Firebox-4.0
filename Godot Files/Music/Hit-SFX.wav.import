@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/Hit-SFX.wav-ccdffc1eaaa72a08d27d051eef4e283a.sample"
+type="AudioStreamWAV"
+uid="uid://iiv7ip7h2up8"
+path="res://.godot/imported/Hit-SFX.wav-ccdffc1eaaa72a08d27d051eef4e283a.sample"
 
 [deps]
 
 source_file="res://Music/Hit-SFX.wav"
-dest_files=[ "res://.import/Hit-SFX.wav-ccdffc1eaaa72a08d27d051eef4e283a.sample" ]
+dest_files=["res://.godot/imported/Hit-SFX.wav-ccdffc1eaaa72a08d27d051eef4e283a.sample"]
 
 [params]
 

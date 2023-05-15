@@ -3,9 +3,9 @@ extends Node
 signal max_changed(new_max)
 signal changed(new_health)
 signal end_game
-export (int) var max_health = 10 setget set_max
+@export (int) var max_health = 10: set = set_max
 
-onready var current = max_health setget set_current
+@onready var current = max_health: set = set_current
 
 func _read():
 	_initialze();

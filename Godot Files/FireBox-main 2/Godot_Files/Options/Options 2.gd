@@ -13,8 +13,8 @@ func _set_keys():
 	for i in Players:
 		for j in ACTIONS:
 			get_node("Panel/ScrollContainer" + str(i) + "/VBoxContainer" + str(i) + "/HBoxCont_" + str(i) + str(j) + "/Button").set_pressed(false)
-			if !InputMap.get_action_list(str(i) + str(j)).empty():
-				get_node("Panel/ScrollContainer" + str(i) + "/VBoxContainer" + str(i) + "/HBoxCont_" + str(i) + str(j) + "/Button").set_text(InputMap.get_action_list(str(i) + str(j))[0].as_text())
+			if !InputMap.action_get_events(str(i) + str(j)).is_empty():
+				get_node("Panel/ScrollContainer" + str(i) + "/VBoxContainer" + str(i) + "/HBoxCont_" + str(i) + str(j) + "/Button").set_text(InputMap.action_get_events(str(i) + str(j))[0].as_text())
 			else:
 				get_node("Panel/ScrollContainer" + str(i) + "/VBoxContainer" + str(i) + "/HBoxCont_" + str(i) + str(j) + "/Button").set_text("No Button!")
 
@@ -67,8 +67,8 @@ func _input(event):
 
 func _change_key(new_key):
 	#Delete key of pressed button
-	if !InputMap.get_action_list(action_string).empty():
-		InputMap.action_erase_event(action_string, InputMap.get_action_list(action_string)[0])
+	if !InputMap.action_get_events(action_string).is_empty():
+		InputMap.action_erase_event(action_string, InputMap.action_get_events(action_string)[0])
 	
 	#Check if new key was assigned somewhere
 	for i in ACTIONS:
@@ -82,4 +82,4 @@ func _change_key(new_key):
 
 
 func _on_main_menu_pressed():
-	get_tree().change_scene("res://MainMenu/Main Menu.tscn")
+	get_tree().change_scene_to_file("res://MainMenu/Main Menu.tscn")

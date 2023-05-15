@@ -1,6 +1,6 @@
 extends ColorRect
 
-export var move = KEY_DOWN
+@export var move = KEY_DOWN
 
 # Declare member variables here. Examples:
 # var a = 2

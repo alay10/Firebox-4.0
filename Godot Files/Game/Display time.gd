@@ -25,11 +25,11 @@ func _process(delta):
 		# Timeout now goes to highest health player
 		if (Global.p1_Health > Global.p2_Health):
 			Global.win_player = "P2"
-			get_tree().change_scene("res://Game/WIN.tscn")
+			get_tree().change_scene_to_file("res://Game/WIN.tscn")
 		elif (Global.p2_Health > Global.p1_Health):
 			Global.win_player = "P1"
-			get_tree().change_scene("res://Game/WIN.tscn")
+			get_tree().change_scene_to_file("res://Game/WIN.tscn")
 		# Pray this never happens
 		else:
 			Global.win_player = "Nobody"
-			get_tree().change_scene("res://Game/WIN.tscn")
+			get_tree().change_scene_to_file("res://Game/WIN.tscn")

@@ -9,7 +9,7 @@ func _onready():
 	is_ai_controlled = true
 	speed = 50
 	setup_ai_think_time_timer()
-	._onready()
+	super._onready()
 
 	
 func ai_get_direction():
@@ -18,13 +18,14 @@ func ai_get_direction():
 func ai_move():
 	var direction = ai_get_direction()
 	var motion = direction.normalized() * speed
-	move_and_slide(motion)
+	set_velocity(motion)
+	move_and_slide()
 
 func setup_ai_think_time_timer():
 	ai_think_time_timer = Timer.new()
 	ai_think_time_timer.set_one_shot(true)
 	ai_think_time_timer.set_wait_time(ai_think_time)
-	ai_think_time_timer.connect("timeout", self, "on_ai_thinktime_timeout_complete")
+	ai_think_time_timer.connect("timeout", Callable(self, "on_ai_thinktime_timeout_complete"))
 	add_child(ai_think_time_timer)
 	
 	

@@ -12,4 +12,6 @@ func execute(s, dir):
 		s.velocity.x -= 1 * fspeed
 		
 	s.velocity = s.velocity.normalized()
-	s.velocity = s.move_and_slide(s.velocity * s.max_speed)
+	s.set_velocity(s.velocity * s.max_speed)
+	s.move_and_slide()
+	s.velocity = s.velocity

@@ -6,7 +6,7 @@ extends Area2D
 # var b = "text"
 
 const hit_duration = 0.15
-export (ShaderMaterial) var red_material
+@export (ShaderMaterial) var red_material
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -19,6 +19,6 @@ func _ready():
 
 func _on_HurtBox_area_entered(area):
 	
-	red_material.set_shader_param("hitFX", true)
-	yield(get_tree().create_timer(hit_duration), "timeout")
-	red_material.set_shader_param("hitFX", false)
+	red_material.set_shader_parameter("hitFX", true)
+	await get_tree().create_timer(hit_duration).timeout
+	red_material.set_shader_parameter("hitFX", false)

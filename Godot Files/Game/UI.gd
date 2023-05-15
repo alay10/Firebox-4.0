@@ -2,7 +2,7 @@ extends Node2D
 
 var Displaytime = 0
 
-onready var timer = get_node("Timer");
+@onready var timer = get_node("Timer");
 #var red = load("res://Game/materials/p1Shader.tres")ff8282
 #var blue = load("res://Game/materials/p2Shader.tres")#6db9de
 

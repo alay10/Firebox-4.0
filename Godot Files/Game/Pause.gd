@@ -25,7 +25,7 @@ func _on_Return_main_pressed():
 	var new_state = !get_tree().paused
 	get_tree().paused = new_state
 	visible = new_state
-	get_tree().change_scene("res://MainMenu/Main Menu.tscn")
+	get_tree().change_scene_to_file("res://MainMenu/Main Menu.tscn")
 
 
 

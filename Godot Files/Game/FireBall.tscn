@@ -3,7 +3,7 @@
 [ext_resource path="res://Game/Scripts/FireBall.gd" type="Script" id=1]
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 69.8125, 70 )
+size = Vector2( 69.8125, 70 )
 
 [node name="FireBall" type="Area2D"]
 position = Vector2( -71, -55 )
@@ -18,10 +18,10 @@ Blockstun = 50
 Damage = 1
 
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_left = 1.0
-margin_top = -16.0
-margin_right = 141.0
-margin_bottom = 124.0
+offset_left = 1.0
+offset_top = -16.0
+offset_right = 141.0
+offset_bottom = 124.0
 color = Color( 0.972549, 0.486275, 0.0980392, 1 )
 
 [node name="hitbox" type="CollisionShape2D" parent="."]

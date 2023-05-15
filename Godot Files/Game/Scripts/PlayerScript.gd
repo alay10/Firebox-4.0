@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends CharacterBody2D
 
 
 # export var moveLeft = KEY_LEFT
@@ -8,8 +8,8 @@ extends KinematicBody2D
 
 var controler = preload("res://Game/AnimatedPlayer/test/Controler.gd")
 
-export(float) var MAX_HEALTH: float = 10.0
-onready var health: float = MAX_HEALTH
+@export var MAX_HEALTH: float: float = 10.0
+@onready var health: float = MAX_HEALTH
 
 var P_layer
 var moveLeft = KEY_LEFT
@@ -41,10 +41,10 @@ var dashingSpeed = 1500
 var fMotion
 var bMotion
 var inJump: bool = false
-export(int) var jumpMultiplier = 1700
-export(float) var airSpeedMultiplier = .975
-export(int) var gravityMultiplier = 80
-export(bool) var airDashEnabled = false
+@export var jumpMultiplier: int = 1700
+@export var airSpeedMultiplier: float = .975
+@export var gravityMultiplier: int = 80
+@export var airDashEnabled: bool = false
 var airDashMultiplyer = 1
 var Delta
 var GravMod = 1.0
@@ -59,23 +59,23 @@ class fireball:
 
 	var Startup = 30
 
-	export(int) var Lag = 30
+	@export var Lag: int = 30
 	var buffer = 0
 	var timer
 
 # Uppercut Values
 var Uppercut
 var inUppercut = false
-export(Vector2) var UppercutMotion
+@export var UppercutMotion: Vector2
 var UppercutStartup = 15
 
-export(int) var UppercutLag= 70
+@export var UppercutLag: int= 70
 var uppercut_buffer = 0
 var uppercut_timer = 0
 
 
 #kick varibles
-export(int) var kickEndLag = 30
+@export var kickEndLag: int = 30
 var kickActiveFrames = 5
 var kickStartup = 13
 var kickTimer = 0
@@ -87,17 +87,17 @@ var JumpPunchLag = 45
 var JumpPunchvec = Vector2(455, 740)
 
 #Jab Variables
-export(int) var jabEndLag = 10
+@export var jabEndLag: int = 10
 var jabTimer = 0
 
 #air kick varibles
 var AirkickEndlag = 40
 
 # Parry Variables
-export(int) var parryWindow = 6
-export(int) var parryStun = 16
+@export var parryWindow: int = 6
+@export var parryStun: int = 16
 var parrying = false
-export(bool) var parryed = false
+@export var parryed: bool = false
 
 #timers
 var inputTimerArray = [0]
@@ -107,25 +107,25 @@ var timer = 0
 var lagTimer = 0
 var hitstun = 0
 var parryTimer = 0
-export(int)var parryedTimer = 0
+@export(int)var parryedTimer = 0
 var blockstun = 0
 
 # SHADER
-export (ShaderMaterial) var shader
-export var hitColor = Vector3(1, 0, 0)
-export var blockingColor = Vector3(0.15, 0.15, 0.15)
-export var blockedColor = Vector3(1, 1, 0)
-export var parryColor = Vector3(0, 1, 1)
+@export (ShaderMaterial) var shader
+@export var hitColor = Vector3(1, 0, 0)
+@export var blockingColor = Vector3(0.15, 0.15, 0.15)
+@export var blockedColor = Vector3(1, 1, 0)
+@export var parryColor = Vector3(0, 1, 1)
 
 
 # SHADING FUNCTIONS
 func shadePlayer(color: Vector3, strength: float):
-	shader.set_shader_param("shading", true)
-	shader.set_shader_param("strength", strength)
-	shader.set_shader_param("customColor", color)
+	shader.set_shader_parameter("shading", true)
+	shader.set_shader_parameter("strength", strength)
+	shader.set_shader_parameter("customColor", color)
 	
 func disableShading():
-	shader.set_shader_param("shading", false)
+	shader.set_shader_parameter("shading", false)
 
 # Returns true if player is on the left
 func onLeft():
@@ -190,13 +190,13 @@ func flipPlayer():
 		$Jump_punch.scale.x = 1
 		$Airkick.scale.x = 1
 
-func inCheck(var inputList):
+func inCheck(inputList):
 	for inputName in inputList:
 		if Input.is_action_pressed(self.name + inputName):
 			return inputName
 	return null
 
-func AnimationCheck(var input):
+func AnimationCheck(input):
 	if input == fMotion:
 		get_node("PlayerSprite").play("Walk")
 	elif input == "_Down":
@@ -204,7 +204,7 @@ func AnimationCheck(var input):
 	else: 
 		get_node("PlayerSprite").play("Stand")
 
-func applyMotion(var input, var delta):
+func applyMotion(input, delta):
 	if input == fMotion:
 		motion.x -= forwardSpeed * 1 * flippedMotion
 	if input == bMotion:
@@ -241,7 +241,7 @@ func reset_dash():
 		dB = false
 
 # The call when you want to dash
-func dash(var delta):
+func dash(delta):
 		if dF:
 			motion.x -= dashingSpeed * 1 * flippedMotion
 			$PlayerSprite.play("Dash")
@@ -273,7 +273,7 @@ func checkInput():
 			inputTimerArray.pop_front()
 
 # finds the ammount of buffered inputs inputted after a certin ammount of frames
-func get_buffer_window(var frames):
+func get_buffer_window(frames):
 	for i in inputTimerArray.size():
 		if inputTimerArray[i]+frames > timer:
 			return inputTimerArray.size() - i
@@ -296,7 +296,7 @@ func throw_fireball():
 	
 	if lagTimer == Fireball.Startup:
 		
-		Fireball.instance = Fireball.scene.instance()
+		Fireball.instance = Fireball.scene.instantiate()
 		get_parent().add_child(Fireball.instance)
 		Fireball.instance.init(self.position, onLeft(), self, Color("#f87c19"))
 		Fireball.instance.position += Vector2(0, 70)
@@ -305,7 +305,7 @@ func throw_fireball():
 func Reset_Fireball():
 	Fireball.active = false
 
-func jab_check(var input):
+func jab_check(input):
 	if input == null and Input.is_action_just_pressed("%s_Attack" % self.name) and lagTimer == 0:
 		$jabBox/AnimationPlayer.play("jab")
 		lagTimer = jabEndLag
@@ -368,7 +368,7 @@ func Uppercut():
 func Reset_Uppercut():
 	inUppercut = false
 	
-func parry_check(var input):
+func parry_check(input):
 	
 	if Input.is_action_just_pressed(self.name + str(fMotion)):
 		parrying = true
@@ -385,7 +385,7 @@ func parry_check(var input):
 # P_layer+8 is the High hitbox
 # P_layer+16 is the mid Hitbox
 # Any number + 1 is the Hurtbox variant
-func block_check(var input):
+func block_check(input):
 	var Priority_in = inCheck([fMotion, bMotion])
 	if Priority_in == bMotion and lagTimer == 0:
 		$BlockBox/BlockingBox.disabled = false
@@ -394,26 +394,26 @@ func block_check(var input):
 		# Turn on blocking shader
 		shadePlayer(blockingColor, 0.6)
 		
-		get_node("BlockBox").set_collision_layer_bit(P_layer+1+16, 1)
-		get_node("HurtBox").set_collision_layer_bit(P_layer+1+16, 0)
+		get_node("BlockBox").set_collision_layer_value(P_layer+1+16, 1)
+		get_node("HurtBox").set_collision_layer_value(P_layer+1+16, 0)
 		if input == "_Down":
-			get_node("BlockBox").set_collision_layer_bit(P_layer+1, 1)
-			get_node("BlockBox").set_collision_layer_bit((P_layer+1)+8, 0)
+			get_node("BlockBox").set_collision_layer_value(P_layer+1, 1)
+			get_node("BlockBox").set_collision_layer_value((P_layer+1)+8, 0)
 			
-			get_node("HurtBox").set_collision_layer_bit(P_layer+1, 0)
-			get_node("HurtBox").set_collision_layer_bit((P_layer+1)+8, 1)
+			get_node("HurtBox").set_collision_layer_value(P_layer+1, 0)
+			get_node("HurtBox").set_collision_layer_value((P_layer+1)+8, 1)
 		else:
-			get_node("BlockBox").set_collision_layer_bit(P_layer+1+8, 1)
-			get_node("BlockBox").set_collision_layer_bit((P_layer+1), 0)
+			get_node("BlockBox").set_collision_layer_value(P_layer+1+8, 1)
+			get_node("BlockBox").set_collision_layer_value((P_layer+1), 0)
 			
-			get_node("HurtBox").set_collision_layer_bit(P_layer+1+8, 0)
-			get_node("HurtBox").set_collision_layer_bit((P_layer+1), 1)
+			get_node("HurtBox").set_collision_layer_value(P_layer+1+8, 0)
+			get_node("HurtBox").set_collision_layer_value((P_layer+1), 1)
 	else:
 		reset_block()
 func reset_block():
-	get_node("HurtBox").set_collision_layer_bit(P_layer+1, 1)
-	get_node("HurtBox").set_collision_layer_bit(P_layer+1+8, 1)
-	get_node("HurtBox").set_collision_layer_bit(P_layer+1+16, 1)
+	get_node("HurtBox").set_collision_layer_value(P_layer+1, 1)
+	get_node("HurtBox").set_collision_layer_value(P_layer+1+8, 1)
+	get_node("HurtBox").set_collision_layer_value(P_layer+1+16, 1)
 	$BlockBox.visible = false
 	$BlockBox/BlockingBox.disabled = true
 	$HurtBox/CollisionShape2D.disabled = false
@@ -427,7 +427,7 @@ func jump_check():
 	else:
 		return false
 
-func jump(var delta):
+func jump(delta):
 	motion.y = -jumpMultiplier * 1
 	get_node("PlayerSprite").play("Jump")
 	inJump = true
@@ -440,14 +440,14 @@ func jump(var delta):
 		reset_block()
 	# is_on_floor() is a function that just works ig
 	
-func apply_Hit_Stun(var HitVec):
+func apply_Hit_Stun(HitVec):
 	motion = HitVec * Vector2(1, 1)
 	motion.x *= flippedMotion
 	
 	if is_on_floor():
 		motion.y *= 1.4
 
-func apply_Block_stun(var BlockVec):
+func apply_Block_stun(BlockVec):
 	motion = BlockVec * Vector2(1, 1)
 	motion.x *= flippedMotion
 	
@@ -475,16 +475,16 @@ func _ready():
 	if self.name == "P1" :
 		
 		print("Setting P1 Shader Params")
-		shader.set_shader_param("headBand", Global.p1_headband_color)
-		shader.set_shader_param("body", Global.p1_body_color)
+		shader.set_shader_parameter("headBand", Global.p1_headband_color)
+		shader.set_shader_parameter("body", Global.p1_body_color)
 		get_parent().get_node("UI/P1_HealthBar/ColorRect").color = Global.p1_headband_color
 		
 
 	if self.name == "P2" :
 		
 		print("Setting P1 Shader Params")
-		shader.set_shader_param("headBand", Global.p2_headband_color)
-		shader.set_shader_param("body", Global.p2_body_color)
+		shader.set_shader_parameter("headBand", Global.p2_headband_color)
+		shader.set_shader_parameter("body", Global.p2_body_color)
 		get_parent().get_node("UI/P2_HealthBar/ColorRect").color = Global.p2_headband_color
 		
 		
@@ -615,10 +615,15 @@ func _physics_process(delta):
 	
 	if (inUppercut or inJump or hitstun > timer):
 		print(motion.y)
-		move_and_slide(motion, Vector2.UP)
+		set_velocity(motion)
+		set_up_direction(Vector2.UP)
+		move_and_slide()
 	else:
 		print("Snapping")
-		move_and_slide_with_snap(motion, Vector2(0,50), Vector2.UP)
+		set_velocity(motion)
+		# TODOConverter40 looks that snap in Godot 4.0 is float, not vector like in Godot 3 - previous value `Vector2(0,50)`
+		set_up_direction(Vector2.UP)
+		move_and_slide()
 	# Update lag timer
 	if lagTimer > 0:
 		lagTimer -= 1
@@ -631,7 +636,7 @@ func _physics_process(delta):
 	if (health <= 0) and is_on_floor():
 		print(self.name, " Has lost")
 		Global.win_player = self.name
-		get_tree().change_scene("res://Game/WIN.tscn")
+		get_tree().change_scene_to_file("res://Game/WIN.tscn")
 
 
 # THIS IS WHERE WE WILL HANDLE BEING HIT

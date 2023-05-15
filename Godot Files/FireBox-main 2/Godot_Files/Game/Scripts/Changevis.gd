@@ -1,6 +1,6 @@
 extends TextureRect
 
-export var move = KEY_LEFT
+@export var move = KEY_LEFT
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"

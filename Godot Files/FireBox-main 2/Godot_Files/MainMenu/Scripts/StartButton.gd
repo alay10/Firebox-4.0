@@ -12,7 +12,7 @@ func _ready():
 
 func _pressed():
 	print("Button Pressed")
-	get_tree().change_scene("res://Game/GameState_KinematicBodyRework.tscn")
+	get_tree().change_scene_to_file("res://Game/GameState_KinematicBodyRework.tscn")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

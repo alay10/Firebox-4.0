@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/gilu.wav-f296c767eb2daa6bb403f334e2749d78.sample"
+type="AudioStreamWAV"
+uid="uid://i2gcrs4ucsk8"
+path="res://.godot/imported/gilu.wav-f296c767eb2daa6bb403f334e2749d78.sample"
 
 [deps]
 
 source_file="res://Music/gilu.wav"
-dest_files=[ "res://.import/gilu.wav-f296c767eb2daa6bb403f334e2749d78.sample" ]
+dest_files=["res://.godot/imported/gilu.wav-f296c767eb2daa6bb403f334e2749d78.sample"]
 
 [params]
 

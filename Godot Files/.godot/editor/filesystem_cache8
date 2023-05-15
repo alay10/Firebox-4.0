@@ -1,0 +1,160 @@
+2a60927148abd1d33b818b535e306557
+::res://::1684184718
+default_bus_layout.tres::AudioBusLayout::-1::1684184655::0::1::::<><>::
+default_env.tres::Environment::-1::1684184655::0::1::::<><>::
+GameState.tscn::PackedScene::-1::1684184655::0::1::::<><>::
+Global.gd::GDScript::-1::1684184655::0::1::::<>Node<>::
+Global.tscn::PackedScene::-1::1684184655::0::1::::<><>::res://Global.gd
+HealthBarBorder.png::CompressedTexture2D::3134912159156669576::1670384126::1684184737::1::::<><>::
+icon.png::CompressedTexture2D::1239680793161481431::1670384126::1684184737::1::::<><>::
+kin2.gd::GDScript::-1::1684184655::0::1::::<>CharacterBody2D<>::
+language.csv::Translation::6777442370412966242::1670384126::1684184718::1::::<><>::
+Node2D.tscn::PackedScene::-1::1684184655::0::1::::<><>::
+language.en.translation::OptimizedTranslation::1402982416395088586::1684184718::0::1::::<><>::
+language.es.translation::OptimizedTranslation::4311978286021188745::1684184718::0::1::::<><>::
+::res://FireBox-main 2/::1670384126
+backlog 2.md::TextFile::-1::1670384126::0::1::::<><>::
+backlog.md::TextFile::-1::1670384126::0::1::::<><>::
+README.md::TextFile::-1::1670384126::0::1::::<><>::
+sprintScript 2.txt::TextFile::-1::1670384126::0::1::::<><>::
+sprintScript.txt::TextFile::-1::1670384126::0::1::::<><>::
+::res://FireBox-main 2/sprint1/::1670384126
+alay10.commits 2.txt::TextFile::-1::1670384126::0::1::::<><>::
+alay10.commits.txt::TextFile::-1::1670384126::0::1::::<><>::
+alay10Sprint1 2.md::TextFile::-1::1670384126::0::1::::<><>::
+alay10Sprint1.md::TextFile::-1::1670384126::0::1::::<><>::
+bbussell.commits 2.txt::TextFile::-1::1670384126::0::1::::<><>::
+bbussell.commits.txt::TextFile::-1::1670384126::0::1::::<><>::
+bbussellSprint1 2.md::TextFile::-1::1670384126::0::1::::<><>::
+bbussellSprint1.md::TextFile::-1::1670384126::0::1::::<><>::
+dables.commits.txt::TextFile::-1::1670384126::0::1::::<><>::
+dablesSprint1 2.md::TextFile::-1::1670384126::0::1::::<><>::
+dablesSprint1.md::TextFile::-1::1670384126::0::1::::<><>::
+hli102.commit 2.txt::TextFile::-1::1670384126::0::1::::<><>::
+hli102.commit.txt::TextFile::-1::1670384126::0::1::::<><>::
+hli102Sprint1 2.md::TextFile::-1::1670384126::0::1::::<><>::
+hli102Sprint1.md::TextFile::-1::1670384126::0::1::::<><>::
+test 2.txt::TextFile::-1::1670384126::0::1::::<><>::
+test.txt::TextFile::-1::1670384126::0::1::::<><>::
+wouyang2.commit.txt::TextFile::-1::1670384126::0::1::::<><>::
+wouyang2Sprint1.md::TextFile::-1::1670384126::0::1::::<><>::
+::res://FireBox-main 2/sprint2/::1670384126
+alay10.commits.txt::TextFile::-1::1670384126::0::1::::<><>::
+alay10Sprint1 2.md::TextFile::-1::1670384126::0::1::::<><>::
+alay10Sprint1.md::TextFile::-1::1670384126::0::1::::<><>::
+bbussell.commits 2.txt::TextFile::-1::1670384126::0::1::::<><>::
+bbussell.commits.txt::TextFile::-1::1670384126::0::1::::<><>::
+bbussellSprint2 2.md::TextFile::-1::1670384126::0::1::::<><>::
+bbussellSprint2.md::TextFile::-1::1670384126::0::1::::<><>::
+Dables1.commits 2.txt::TextFile::-1::1670384126::0::1::::<><>::
+Dables1.commits.txt::TextFile::-1::1670384126::0::1::::<><>::
+dablesSprint2 2.md::TextFile::-1::1670384126::0::1::::<><>::
+dablesSprint2.md::TextFile::-1::1670384126::0::1::::<><>::
+hli102.commits 2.txt::TextFile::-1::1670384126::0::1::::<><>::
+hli102.commits.txt::TextFile::-1::1670384126::0::1::::<><>::
+hli102Sprint2 2.md::TextFile::-1::1670384126::0::1::::<><>::
+hli102Sprint2.md::TextFile::-1::1670384126::0::1::::<><>::
+wouyang2.commit 2.txt::TextFile::-1::1670384126::0::1::::<><>::
+wouyang2.commit.txt::TextFile::-1::1670384126::0::1::::<><>::
+wouyang2Sprint2 2.md::TextFile::-1::1670384126::0::1::::<><>::
+wouyang2Sprint2.md::TextFile::-1::1670384126::0::1::::<><>::
+::res://Fonts/::1670384126
+Main Menu.tres::FontFile::-1::1684184655::0::1::::<><>::
+Minecraft.ttf::FontFile::5886493700989494110::1670384126::1684184737::1::::<><>::
+Title_font.tres::FontFile::-1::1684184655::0::1::::<><>::res://Fonts/Minecraft.ttf
+Vol.tres::FontFile::-1::1684184655::0::1::::<><>::res://Fonts/Minecraft.ttf
+::res://Game/::1670384126
+Animation.gd::GDScript::-1::1684184655::0::1::::<>AnimatedSprite2D<>::
+BootLogo.png::CompressedTexture2D::6409322024801741791::1670384126::1684184737::1::::<><>::
+Changevis.gd::GDScript::-1::1684184655::0::1::::<>TextureRect<>::
+Changevisf.gd::GDScript::-1::1684184655::0::1::::<>TextureRect<>::
+chunli.mp3::AudioStreamMP3::2171783003720499256::1670384126::1684184737::1::::<><>::
+Display time.gd::GDScript::-1::1684184655::0::1::::<>Label<>::
+FireBall.tscn::PackedScene::-1::1684184655::0::1::::<><>::res://Game/Scripts/FireBall.gd
+GameState_KinematicBodyRework.tscn::PackedScene::-1::1684184655::0::1::::<><>::res://Game/Pause.gd<>res://Fonts/Title_font.tres<>res://Fonts/Main Menu.tres<>res://Game/pause.png<>res://MainMenu/UI/Main Menu.tres<>res://Game/Scripts/Pause.gd<>res://Game/Player.tscn<>res://Game/UI.gd<>res://Game/AnimatedPlayer/test/Controler.gd<>res://Game/Display time.gd<>res://Game/materials/redden.tres<>res://Game/materials/p2Shader.tres<>res://Game/materials/p1Shader.tres<>res://Game/HealthBar.tscn
+HealthBar.tscn::PackedScene::-1::1684184655::0::1::::<><>::res://Game/Scripts/HealthBar.gd
+P2 - OLD.tscn::PackedScene::-1::1684184655::0::1::::<><>::res://Game/Scripts/HurtBox.gd<>res://Game/materials/p2Shader.tres<>res://Game/AnimatedPlayer/Boxf2.0.png<>res://Game/AnimatedPlayer/Boxf1.png
+Pause.gd::GDScript::-1::1684184655::0::1::::<>Control<>::
+pause.png::CompressedTexture2D::6283381845829884658::1670384126::1684184737::1::::<><>::
+Player-for-refrence.tscn::PackedScene::-1::1684184655::0::1::::<><>::res://Game/Scripts/PlayerScript.gd<>res://Game/materials/p1Shader.tres<>res://Game/Scripts/HurtBox.gd<>res://Game/AnimatedPlayer/PlayerAnimation.tres<>res://Game/Scripts/Varibles.gd
+Player.tscn::PackedScene::-1::1684184655::0::1::::<><>::res://Game/Scripts/PlayerScript.gd<>res://Game/materials/p1Shader.tres<>res://Game/Scripts/HurtBox.gd<>res://Game/AnimatedPlayer/PlayerAnimation.tres<>res://Game/Scripts/Varibles.gd
+select.tscn::PackedScene::-1::1684184655::0::1::::<><>::res://Game/Scripts/select.gd<>res://Fonts/Main Menu.tres<>res://Game/materials/p2Shader.tres<>res://Fonts/Title_font.tres<>res://Game/AnimatedPlayer/PlayerAnimation.tres<>res://Game/materials/p1Shader.tres
+Test player.gd::GDScript::-1::1684184655::0::1::::<>Node2D<>::
+UI.gd::GDScript::-1::1684184655::0::1::::<>Node2D<>::
+WIN.tscn::PackedScene::-1::1684184655::0::1::::<><>::res://Game/Scripts/WIN.gd<>res://Fonts/Title_font.tres<>res://MainMenu/UI/Main Menu.tres<>res://Game/AnimatedPlayer/PlayerAnimation.tres<>res://Game/materials/p1Shader.tres<>res://Game/materials/p2Shader.tres
+::res://Game/AnimatedPlayer/::1670384126
+Box-Dash.png::CompressedTexture2D::6077724869803354693::1670384126::1684184737::1::::<><>::
+Box-dashBack.png::CompressedTexture2D::5378012468594157374::1670384126::1684184737::1::::<><>::
+Box-Jump_Punch.png::CompressedTexture2D::7566613191511656545::1670384126::1684184737::1::::<><>::
+Boxf1.png::CompressedTexture2D::5571946092581855859::1670384126::1684184737::1::::<><>::
+Boxf2.0.png::CompressedTexture2D::5661832756741197465::1670384126::1684184737::1::::<><>::
+Boxf2.png::CompressedTexture2D::1795777267364212730::1670384126::1684184737::1::::<><>::
+BoxKick1.png::CompressedTexture2D::9193790704598236945::1670384126::1684184737::1::::<><>::
+BoxKick2.png::CompressedTexture2D::8459541954681207604::1670384126::1684184737::1::::<><>::
+BoxKick3.png::CompressedTexture2D::4051147230546812169::1670384126::1684184737::1::::<><>::
+PlayerAnimation.tres::SpriteFrames::-1::1684184656::0::1::::<><>::res://Game/AnimatedPlayer/Boxf2.0.png<>res://Game/AnimatedPlayer/Boxf1.png<>res://Game/AnimatedPlayer/Fireball/Fireball1.png<>res://Game/AnimatedPlayer/Fireball/Fireball3.png<>res://Game/AnimatedPlayer/Fireball/Fireball4.png<>res://Game/AnimatedPlayer/Fireball/Fireball2.png<>res://Game/AnimatedPlayer/Box-Jump_Punch.png<>res://Game/AnimatedPlayer/BoxKick1.png<>res://Game/AnimatedPlayer/Box-Dash.png<>res://Game/AnimatedPlayer/Box-dashBack.png<>res://Game/AnimatedPlayer/Boxf2.png
+TestAnim.tres::AnimatedTexture::-1::1684184656::0::1::::<><>::
+::res://Game/AnimatedPlayer/Fireball/::1670384126
+Fireball1.png::CompressedTexture2D::2663793094858239587::1670384126::1684184737::1::::<><>::
+Fireball2.png::CompressedTexture2D::7563652792507465752::1670384126::1684184737::1::::<><>::
+Fireball3.png::CompressedTexture2D::2805940938537185506::1670384126::1684184737::1::::<><>::
+Fireball4.png::CompressedTexture2D::6320122357154784776::1670384126::1684184737::1::::<><>::
+::res://Game/AnimatedPlayer/test/::1670384126
+Control.tscn::PackedScene::-1::1684184656::0::1::::<><>::res://Game/AnimatedPlayer/test/Controler.gd
+Controler.gd::GDScript::-1::1684184656::0::1::::cont<>Node2D<>::
+move.gd::GDScript::-1::1684184656::0::1::::<>Node2D<>::
+Test player.gd::GDScript::-1::1684184656::0::1::::Player_cont<>Node2D<>::
+::res://Game/health/::1670384126
+Health.gd::GDScript::-1::1684184656::0::1::::<>Node<>::
+Health.tscn::PackedScene::-1::1684184656::0::1::::<><>::res://Game/health/Health.gd
+ProgressBar.tscn::PackedScene::-1::1684184656::0::1::::<><>::
+::res://Game/materials/::1670384126
+p1Shader.tres::ShaderMaterial::-1::1684184656::0::1::::<><>::res://Game/materials/redden.tres
+p2Shader.tres::ShaderMaterial::-1::1684184656::0::1::::<><>::res://Game/materials/redden.tres
+redden.tres::Shader::-1::1684184656::0::1::::<><>::
+::res://Game/Scripts/::1670384126
+BlockBox.gd::GDScript::-1::1684184656::0::1::::<>Area2D<>::
+Changevis.gd::GDScript::-1::1684184656::0::1::::<>TextureRect<>::
+Changevisf.gd::GDScript::-1::1684184656::0::1::::<>TextureRect<>::
+FireBall.gd::GDScript::-1::1684184655::0::1::::<>Area2D<>::
+HealthBar.gd::GDScript::-1::1684184656::0::1::::<>Node2D<>::
+HurtBox.gd::GDScript::-1::1684184656::0::1::::<>Area2D<>::
+kickBox.gd::GDScript::-1::1684184656::0::1::::<>ColorRect<>::
+NPC.gd::GDScript::-1::1684184656::0::1::::<>CharacterBody2D<>::
+Pause.gd::GDScript::-1::1684184656::0::1::::<>TextureButton<>::
+PlayerScript-2.gd::GDScript::-1::1684184656::0::1::::<>CharacterBody2D<>::
+PlayerScript.gd::GDScript::-1::1684184656::0::1::::<>CharacterBody2D<>::
+select.gd::GDScript::-1::1684184655::0::1::::<>Control<>::
+Test player.gd::GDScript::-1::1684184656::0::1::::<>CharacterBody2D<>::
+Varibles.gd::GDScript::-1::1684184656::0::1::::<>Area2D<>::
+WIN.gd::GDScript::-1::1684184656::0::1::::<>Control<>::
+::res://Logo/::1670384126
+Logo.png::CompressedTexture2D::7667333220139701650::1670384126::1684184737::1::::<><>::
+::res://MainMenu/::1670384126
+gilu.wav::AudioStreamWAV::3794637727370622355::1670384126::1684184737::1::::<><>::
+Main Menu.tscn::PackedScene::-1::1684184655::0::1::::<><>::res://MainMenu/Scripts/StartButton.gd<>res://MainMenu/Scripts/MainMenu.gd<>res://MainMenu/Scripts/QuitButtton.gd<>res://MainMenu/UI/Main Menu.tres<>res://MainMenu/IMG/Firebox.png<>res://Fonts/Main Menu.tres
+::res://MainMenu/IMG/::1670384126
+Firebox.png::CompressedTexture2D::3260684716255310640::1670384126::1684184737::1::::<><>::
+::res://MainMenu/Scripts/::1670384126
+MainMenu.gd::GDScript::-1::1684184655::0::1::::<>Control<>::
+OptionsButton.gd::GDScript::-1::1684184655::0::1::::<>Button<>::
+QuitButtton.gd::GDScript::-1::1684184655::0::1::::<>Node<>::
+StartButton.gd::GDScript::-1::1684184655::0::1::::<>Button<>::
+::res://MainMenu/UI/::1670384126
+Button.tres::StyleBoxFlat::-1::1684184655::0::1::::<><>::
+Main Menu.tres::Theme::-1::1684184655::0::1::::<><>::res://MainMenu/UI/Button.tres<>res://Fonts/Main Menu.tres
+::res://Music/::1670384126
+Block-SFX.wav::AudioStreamWAV::6561689248989584981::1670384126::1684184737::1::::<><>::
+chunli.mp3::AudioStreamMP3::8908075725671586528::1670384126::1684184737::1::::<><>::
+gilu.wav::AudioStreamWAV::617617744056167341::1670384126::1684184737::1::::<><>::
+Hit-SFX.wav::AudioStreamWAV::579358418213029879::1670384126::1684184737::1::::<><>::
+Maybe_Parry-SFX.wav::AudioStreamWAV::1039742145272399794::1670384126::1684184737::1::::<><>::
+music_control.gd::GDScript::-1::1684184655::0::1::::<>Node<>::
+music_control.tscn::PackedScene::-1::1684184655::0::1::::<><>::res://Music/music_control.gd
+::res://Options/::1670384126
+Options.gd::GDScript::-1::1684184655::0::1::::<>Control<>::
+Options.tscn::PackedScene::-1::1684184655::0::1::::<><>::res://Options/Options.gd<>res://Fonts/Main Menu.tres<>res://Fonts/Vol.tres
+tmpOptions.png::CompressedTexture2D::6874718544308525268::1670384126::1684184737::1::::<><>::
+::res://Theme/::1670384126
+blue.tres::Theme::-1::1684184655::0::1::::<><>::
+Red.tres::Theme::-1::1684184655::0::1::::<><>::

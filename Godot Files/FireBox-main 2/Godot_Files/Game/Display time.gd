@@ -21,4 +21,4 @@ func _process(delta):
 	text = Displaystr;
 	
 	if (seconds == 100):
-		get_tree().change_scene("res://MainMenu/Main Menu.tscn")
+		get_tree().change_scene_to_file("res://MainMenu/Main Menu.tscn")

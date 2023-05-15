@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/gilu.wav-1040daa582311567dd0d59349cfebd2f.sample"
+type="AudioStreamWAV"
+uid="uid://bucfenc5j1012"
+path="res://.godot/imported/gilu.wav-1040daa582311567dd0d59349cfebd2f.sample"
 
 [deps]
 
 source_file="res://MainMenu/gilu.wav"
-dest_files=[ "res://.import/gilu.wav-1040daa582311567dd0d59349cfebd2f.sample" ]
+dest_files=["res://.godot/imported/gilu.wav-1040daa582311567dd0d59349cfebd2f.sample"]
 
 [params]
 

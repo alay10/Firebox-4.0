@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=2]
 
-[ext_resource path="res://Game/pause.png" type="Texture" id=4]
+[ext_resource path="res://Game/pause.png" type="Texture2D" id=4]
 [ext_resource path="res://Game/Scripts/Pause.gd" type="Script" id=6]
 [ext_resource path="res://Game/Player.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Game/UI.gd" type="Script" id=8]
@@ -9,14 +9,14 @@
 [ext_resource path="res://Game/HealthBar.tscn" type="PackedScene" id=14]
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 960.25, 400.438 )
+size = Vector2( 960.25, 400.438 )
 
 [sub_resource type="ImageTexture" id=1]
 
-[sub_resource type="DynamicFontData" id=5]
+[sub_resource type="FontFile" id=5]
 font_path = "res://Fonts/Minecraft.ttf"
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="FontFile" id=6]
 size = 50
 font_data = SubResource( 5 )
 
@@ -62,14 +62,14 @@ zoom = Vector2( 1.875, 1.8 )
 [node name="BKG" type="Node2D" parent="."]
 
 [node name="BlackRect" type="ColorRect" parent="BKG"]
-margin_right = 1920.0
-margin_bottom = 1080.0
+offset_right = 1920.0
+offset_bottom = 1080.0
 color = Color( 0, 0, 0, 1 )
 
 [node name="FloorRect" type="ColorRect" parent="BKG"]
-margin_top = 800.0
-margin_right = 1920.0
-margin_bottom = 1077.0
+offset_top = 800.0
+offset_right = 1920.0
+offset_bottom = 1077.0
 
 [node name="wallRight2" type="StaticBody2D" parent="."]
 position = Vector2( 1018, 1212 )
@@ -110,25 +110,25 @@ scale = Vector2( -3, 3 )
 color = Color( 1, 0.505882, 0.505882, 1 )
 
 [node name="TextureButton" type="TextureButton" parent="UI"]
-margin_left = 1840.0
-margin_top = 50.0
-margin_right = 1880.0
-margin_bottom = 90.0
+offset_left = 1840.0
+offset_top = 50.0
+offset_right = 1880.0
+offset_bottom = 90.0
 texture_normal = SubResource( 1 )
 script = ExtResource( 6 )
 
-[node name="Pause" type="Sprite" parent="UI/TextureButton"]
+[node name="Pause" type="Sprite2D" parent="UI/TextureButton"]
 position = Vector2( 21, 18 )
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 4 )
 
 [node name="Display time" type="Label" parent="UI"]
-margin_left = 930.0
-margin_top = 50.0
-margin_right = 970.0
-margin_bottom = 101.0
+offset_left = 930.0
+offset_top = 50.0
+offset_right = 970.0
+offset_bottom = 101.0
 grow_horizontal = 2
-custom_fonts/font = SubResource( 6 )
+theme_override_fonts/font = SubResource( 6 )
 text = "0"
 align = 1
 script = ExtResource( 10 )

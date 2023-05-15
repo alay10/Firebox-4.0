@@ -9,8 +9,8 @@ uniform bool shading = false;
 uniform float strength = 0.6;
 uniform vec3 customColor = vec3(0,0,0);
 
-uniform vec4 headBand : hint_color = vec4(1.0, 0.0, 0.0, 1.0);
-uniform vec4 body : hint_color = vec4(1.0, 1.0, 1.0, 1.0);
+uniform vec4 headBand : source_color = vec4(1.0, 0.0, 0.0, 1.0);
+uniform vec4 body : source_color = vec4(1.0, 1.0, 1.0, 1.0);
 
 void fragment() {
 

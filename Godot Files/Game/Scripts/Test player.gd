@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends CharacterBody2D
 
 
 # export var moveLeft = KEY_LEFT
@@ -29,9 +29,9 @@ var backwardSpeed = 25000
 var dashingSpeed = 200000
 var fMotion
 var bMotion
-export(int) var jumpMultiplier = 900
-export(float) var airSpeedMultiplier = 0.8
-export(int) var gravityMultiplier = 1000
+@export var jumpMultiplier: int = 900
+@export var airSpeedMultiplier: float = 0.8
+@export var gravityMultiplier: int = 1000
 
 
 # FireBall Values
@@ -41,10 +41,10 @@ var fireBallCheck
 var infireball = false
 
 var fireballStartup = 30
-export(int) var fireballLag = 30
+@export var fireballLag: int = 30
 
 #Kick Values
-export(int) var kickEndLag = 30
+@export var kickEndLag: int = 30
 
 #timers
 var timer = 0
@@ -136,7 +136,7 @@ func _physics_process(delta):
 	
 	if fireBallCheck:
 		lagTimer = fireballLag
-		fireball = fireball_scene.instance()
+		fireball = fireball_scene.instantiate()
 		get_parent().add_child(fireball)
 		fireball.init(self.position, onLeft(), self)
 		
@@ -194,7 +194,7 @@ func _physics_process(delta):
 		$fireballAnim/fireballAnimation.play("fire")
 		
 		if lagTimer == fireballStartup:
-			fireball = fireball_scene.instance()
+			fireball = fireball_scene.instantiate()
 			get_parent().add_child(fireball)
 			fireball.init(self.position, onLeft(), self)
 		
@@ -230,7 +230,9 @@ func _physics_process(delta):
 	if lagTimer > 0:
 		lagTimer -= 1
 	
-	move_and_slide(motion, Vector2.UP)
+	set_velocity(motion)
+	set_up_direction(Vector2.UP)
+	move_and_slide()
 
 
 # THIS IS WHERE WE WILL HANDLE BEING HIT
