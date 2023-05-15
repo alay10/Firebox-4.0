@@ -1,0 +1,120 @@
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500   1) extends KinematicBody2D
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500   2) 
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500   3) 
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500   4) export(float) var MAX_HEALTH >
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500   5) var health: float = MAX_HEALTH
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500   6) 
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500   7) var moveLeft = KEY_LEFT
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500   8) var moveRight = KEY_RIGHT
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500   9) var other
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  10) var flipped = false
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  11) 
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  12) # Movement Values
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  13) var friction = 0.5
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  14) var motion = Vector2(0, 0)
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  15) var dashing = false
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  16) var dF = false
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  17) var dB = false
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  18) 
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  19) #export(int) var forwardSpeed>
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  20) #export(int) var backwardSpee>
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  21) var forwardSpeed = 35000
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  22) var backwardSpeed = 25000
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  23) var dashingSpeed = 200000
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  24) var fMotion
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  25) var bMotion
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  26) export(int) var jumpMultiplie>
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  27) export(float) var airSpeedMul>
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  28) export(int) var gravityMultip>
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  29) 
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  30) 
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  31) # FireBall Values
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  32) var fireball
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  33) var fireball_scene = load("Ga>
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  34) var fireBallCheck
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  35) 
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  36) export(int) var fireballLag =>
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  37) export(int) var kickEndLag = >
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  38) 
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  39) #timers
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  40) var timer = 0
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  41) var dashTimer = 0
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  42) var lagTimer = 0
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  43) 
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  44) func hasFliped():
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  45)       if get_position().x < g>
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  46)               if !flipped:
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  47)                       flipped>
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  48)                       return >
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  49)       elif get_position().x >>
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  50)               if flipped:
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  51)                       flipped>
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  52)                       return >
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  53)       return false
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  54)       
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  55) func _ready():
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  56)       ##target = $"../P1"
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  57)       ##is_ai_controlled = tr>
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  58)       setup_ai_think_time_tim>
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  59)       ._onready()
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  60)       
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  61)       
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  62) func ai_get_direction():
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  63)                       ##retur>
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  64)       var direction = 500
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  65) 
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  66) func ai_move():
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  67)       var direction = ai_get_>
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  68)       var motion = direction.>
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  69)       move_and_slide(motion)
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  70) 
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  71) func setup_ai_think_time_time>
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  72)       ai_think_time_timer = T>
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  73)       ai_think_time_timer.set>
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  74)       ai_think_time_timer.set>
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  75)       ai_think_time_timer.con>
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  76)       add_child(ai_think_time>
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  77)       
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  78)       
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  79) #need to detect the health st>
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  80) ## need to add a get_state() >
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  81)       
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  82) func decide_to_attack():
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  83)       ai_think_time_timer.sta>
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  84) 
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  85) func on_ai_thinktime_timeout_>
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  86)       if is_in_range && state>
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  87)                       attack()
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  88)               
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  89) func _process(delta):
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  90)       if state == 0 && target>
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  91)               if is_in_range >
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  92)                       decide_>
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  93)               else:
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  94)                       ai_move>
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  95) func _physics_process(delta):
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  96)       
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  97)       timer += 1
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  98) 
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500  99)       #Checking if the sprite>
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500 100)       if hasFliped():
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500 101)               if flipped:
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500 102)                       # playe>
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500 103)                       $Player>
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500 104)                       $Player>
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500 105)                       fMotion>
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500 106)                       bMotion>
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500 107)                       dashing>
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500 108)                       var tmp>
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500 109)                       forward>
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500 110)                       backwar>
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500 111)                       
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500 112)               else:
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500 113)                       get_nod>
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500 114)                       get_nod>
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500 115)                       fMotion>
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500 116)                       bMotion>
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500 117)                       dashing>
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500 118)                       var tmp>
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500 119)                       forward>
+485ad40c (wouyang2 2022-11-08 22:38:15 -0500 120)                       backwar>

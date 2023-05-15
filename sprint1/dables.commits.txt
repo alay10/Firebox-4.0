@@ -1,0 +1,2 @@
+I made the kickBox.gd, and made small edits to the Gamestate.
+I'm not sure how to do the grep thing, and I'm not too sure how much it applies to us using godot.

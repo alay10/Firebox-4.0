@@ -1,0 +1,67 @@
+37feb0ac Godot Files/Fonts/Main Menu.tres (Haoyu Li 2022-10-23 15:26:24 -0400 1) [gd_resource type="DynamicFont" load_s>
+37feb0ac Godot Files/Fonts/Main Menu.tres (Haoyu Li 2022-10-23 15:26:24 -0400 2)
+37feb0ac Godot Files/Fonts/Main Menu.tres (Haoyu Li 2022-10-23 15:26:24 -0400 3) [sub_resource type="DynamicFontData" i>
+37feb0ac Godot Files/Fonts/Main Menu.tres (Haoyu Li 2022-10-23 15:26:24 -0400 4) font_path = "res://Fonts/Minecraft.ttf"
+37feb0ac Godot Files/Fonts/Main Menu.tres (Haoyu Li 2022-10-23 15:26:24 -0400 5)
+37feb0ac Godot Files/Fonts/Main Menu.tres (Haoyu Li 2022-10-23 15:26:24 -0400 6) [resource]
+37feb0ac Godot Files/Fonts/Main Menu.tres (Haoyu Li 2022-10-23 15:26:24 -0400 7) size = 30
+37feb0ac Godot Files/Fonts/Main Menu.tres (Haoyu Li 2022-10-23 15:26:24 -0400 8) extra_spacing_top = 5
+37feb0ac Godot Files/Fonts/Main Menu.tres (Haoyu Li 2022-10-23 15:26:24 -0400 9) font_data = SubResource( 4 )
+
+37feb0ac Godot Files/Game/Display time.gd (Haoyu Li 2022-10-23 15:26:24 -0400  1) extends Label
+37feb0ac Godot Files/Game/Display time.gd (Haoyu Li 2022-10-23 15:26:24 -0400  2)
+37feb0ac Godot Files/Game/Display time.gd (Haoyu Li 2022-10-23 15:26:24 -0400  3)
+37feb0ac Godot Files/Game/Display time.gd (Haoyu Li 2022-10-23 15:26:24 -0400  4) # Declare member variables here. Exam>
+37feb0ac Godot Files/Game/Display time.gd (Haoyu Li 2022-10-23 15:26:24 -0400  5) # var a = 2
+37feb0ac Godot Files/Game/Display time.gd (Haoyu Li 2022-10-23 15:26:24 -0400  6) # var b = "text"
+37feb0ac Godot Files/Game/Display time.gd (Haoyu Li 2022-10-23 15:26:24 -0400  7)
+37feb0ac Godot Files/Game/Display time.gd (Haoyu Li 2022-10-23 15:26:24 -0400  8)
+37feb0ac Godot Files/Game/Display time.gd (Haoyu Li 2022-10-23 15:26:24 -0400  9) # Called when the node enters the sce>
+37feb0ac Godot Files/Game/Display time.gd (Haoyu Li 2022-10-23 15:26:24 -0400 10) func _ready():
+37feb0ac Godot Files/Game/Display time.gd (Haoyu Li 2022-10-23 15:26:24 -0400 11)       pass # Replace with function bo>
+37feb0ac Godot Files/Game/Display time.gd (Haoyu Li 2022-10-23 15:26:24 -0400 12)
+37feb0ac Godot Files/Game/Display time.gd (Haoyu Li 2022-10-23 15:26:24 -0400 13) func _process(delta):
+2c658674 Godot Files/Game/Display time.gd (Haoyu Li 2022-10-25 08:34:17 -0400 14)       var seconds = get_parent().Disp>
+2c658674 Godot Files/Game/Display time.gd (Haoyu Li 2022-10-25 08:34:17 -0400 15)       var minute = seconds / 60;
+2c658674 Godot Files/Game/Display time.gd (Haoyu Li 2022-10-25 08:34:17 -0400 16)       var second = seconds % 60;
+2c658674 Godot Files/Game/Display time.gd (Haoyu Li 2022-10-25 08:34:17 -0400 17)       var Displaystr = "%02d:%02d" % >
+2c658674 Godot Files/Game/Display time.gd (Haoyu Li 2022-10-25 08:34:17 -0400 18)       text = Displaystr
+
+37feb0ac Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-10-23 15:26:24 -0400   8) [ext_resource path="res://Game/UI.gd" type="Script" id=8]
+37feb0ac Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-10-23 15:26:24 -0400  10) [ext_resource path="res://Game/Display time.gd" type="Script" id=10]
+
+37feb0ac Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-10-23 15:26:24 -0400  19) [sub_resource type="DynamicFontData" id=5]
+37feb0ac Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-10-23 15:26:24 -0400  20) font_path = "res://Fonts/Minecraft.ttf"
+37feb0ac Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-10-23 15:26:24 -0400  21)
+37feb0ac Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-10-23 15:26:24 -0400  22) [sub_resource type="DynamicFont" id=6]
+37feb0ac Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-10-23 15:26:24 -0400  23) size = 50
+37feb0ac Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-10-23 15:26:24 -0400  24) font_data = SubResource( 5 )
+37feb0ac Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-10-23 15:26:24 -0400  25)
+37feb0ac Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-10-23 15:26:24 -0400 215) script = ExtResource( 8 )
+37feb0ac Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-10-23 15:26:24 -0400 218) margin_left = 1840.0
+37feb0ac Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-10-23 15:26:24 -0400 220) margin_right = 1880.0
+37feb0ac Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-10-23 15:26:24 -0400 230) [node name="Display time" type="Label" parent="UI"]
+37feb0ac Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-10-23 15:26:24 -0400 231) margin_left = 960.0
+37feb0ac Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-10-23 15:26:24 -0400 232) margin_top = 50.0
+37feb0ac Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-10-23 15:26:24 -0400 233) margin_right = 1000.0
+37feb0ac Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-10-23 15:26:24 -0400 234) margin_bottom = 101.0
+37feb0ac Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-10-23 15:26:24 -0400 235) custom_fonts/font = SubResource( 6 )
+37feb0ac Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-10-23 15:26:24 -0400 236) text = "0"
+37feb0ac Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-10-23 15:26:24 -0400 237) script = ExtResource( 10 )
+37feb0ac Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-10-23 15:26:24 -0400 238)
+37feb0ac Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-10-23 15:26:24 -0400 239) [node name="Timer" type="Timer" parent="UI"]
+37feb0ac Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-10-23 15:26:24 -0400 240)
+37feb0ac Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-10-23 15:26:24 -0400 356) [connection signal="timeout" from="UI/Timer" to="UI" method="_on_Timer_timeout"]
+
+cd913516 Godot Files/Game/UI.gd (Haoyu Li 2022-10-23 15:30:19 -0400  1) extends Node2D
+cd913516 Godot Files/Game/UI.gd (Haoyu Li 2022-10-23 15:30:19 -0400  2)
+cd913516 Godot Files/Game/UI.gd (Haoyu Li 2022-10-23 15:30:19 -0400  3) var Displaytime = 0
+cd913516 Godot Files/Game/UI.gd (Haoyu Li 2022-10-23 15:30:19 -0400  4)
+cd913516 Godot Files/Game/UI.gd (Haoyu Li 2022-10-23 15:30:19 -0400  5) onready var timer = get_node("Timer");
+cd913516 Godot Files/Game/UI.gd (Haoyu Li 2022-10-23 15:30:19 -0400  6)
+cd913516 Godot Files/Game/UI.gd (Haoyu Li 2022-10-23 15:30:19 -0400  7) func _ready():
+cd913516 Godot Files/Game/UI.gd (Haoyu Li 2022-10-23 15:30:19 -0400  8)         timer.set_wait_time(1);
+cd913516 Godot Files/Game/UI.gd (Haoyu Li 2022-10-23 15:30:19 -0400  9)         timer.start(0);
+cd913516 Godot Files/Game/UI.gd (Haoyu Li 2022-10-23 15:30:19 -0400 10)
+cd913516 Godot Files/Game/UI.gd (Haoyu Li 2022-10-23 15:30:19 -0400 11) func _on_Timer_timeout():
+cd913516 Godot Files/Game/UI.gd (Haoyu Li 2022-10-23 15:30:19 -0400 12)         Displaytime += 1;

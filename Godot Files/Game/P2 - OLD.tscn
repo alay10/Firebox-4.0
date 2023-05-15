@@ -1,0 +1,141 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Game/Scripts/HurtBox.gd" type="Script" id=1]
+[ext_resource path="res://Game/materials/p2Shader.tres" type="Material" id=2]
+[ext_resource path="res://Game/AnimatedPlayer/Boxf2.0.png" type="Texture" id=3]
+[ext_resource path="res://Game/AnimatedPlayer/Boxf1.png" type="Texture" id=4]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 89, 186 )
+
+[sub_resource type="SpriteFrames" id=7]
+animations = [ {
+"frames": [ ExtResource( 4 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 149.75, 77.25 )
+
+[sub_resource type="Animation" id=10]
+resource_name = "kick"
+tracks/0/type = "value"
+tracks/0/path = NodePath("ReferenceRect:border_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.25, 0.75, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 0, 0, 1 ), Color( 1, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("KickHitboxVisual:rect_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.25, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 1 ), Vector2( -1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("KickHitboxVisual:color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.25, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 0, 0, 0.784314 ), Color( 1, 0, 0, 0.784314 ), Color( 0, 0, 0, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("ReferenceRect:rect_scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.25, 0.75, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 2, 2 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("ReferenceRect:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.25, 0.75, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -394, 35 ), Vector2( -394, 35 ), Vector2( -500, 0 ) ]
+}
+
+[sub_resource type="CapsuleShape2D" id=14]
+radius = 67.5
+height = 223.0
+
+[node name="P2 - OLD" type="KinematicBody2D"]
+position = Vector2( 293, 601 )
+collision_layer = 0
+collision_mask = 0
+
+[node name="CollisionBox" type="CollisionShape2D" parent="."]
+position = Vector2( -7, 14 )
+shape = SubResource( 2 )
+
+[node name="PlayerSprite" type="AnimatedSprite" parent="."]
+material = ExtResource( 2 )
+position = Vector2( -60, -58 )
+frames = SubResource( 7 )
+
+[node name="kickBox" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 6
+
+[node name="kickHitbox" type="CollisionShape2D" parent="kickBox"]
+position = Vector2( 237, 123 )
+shape = SubResource( 8 )
+disabled = true
+
+[node name="ReferenceRect" type="ReferenceRect" parent="kickBox"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 86.0
+margin_top = 47.0
+margin_right = 86.0
+margin_bottom = 47.0
+border_width = 5.0
+editor_only = false
+
+[node name="KickHitboxVisual" type="ColorRect" parent="kickBox"]
+margin_left = 89.0
+margin_top = 45.0
+margin_right = 389.0
+margin_bottom = 195.0
+color = Color( 1, 0, 0, 0.54902 )
+
+[node name="kickAnimation" type="AnimationPlayer" parent="kickBox"]
+anims/kick = SubResource( 10 )
+
+[node name="HurtBox" type="Area2D" parent="."]
+position = Vector2( -1, 17 )
+collision_layer = 16
+collision_mask = 2
+script = ExtResource( 1 )
+red_material = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+position = Vector2( 5, -1 )
+shape = SubResource( 14 )

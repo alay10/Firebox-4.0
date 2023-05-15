@@ -1,0 +1,156 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Game/Scripts/select.gd" type="Script" id=1]
+[ext_resource path="res://Fonts/Main Menu.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Game/materials/p2Shader.tres" type="Material" id=3]
+[ext_resource path="res://Fonts/Title_font.tres" type="DynamicFont" id=4]
+[ext_resource path="res://Game/AnimatedPlayer/PlayerAnimation.tres" type="SpriteFrames" id=5]
+[ext_resource path="res://Game/materials/p1Shader.tres" type="Material" id=6]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+P1_Shader = ExtResource( 6 )
+P2_Shader = ExtResource( 3 )
+
+[node name="BKG" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="Column" type="GridContainer" parent="."]
+margin_left = 30.0
+margin_top = 40.0
+margin_right = 994.0
+margin_bottom = 564.0
+custom_constants/vseparation = 10
+
+[node name="Top Label" type="Label" parent="Column"]
+margin_right = 972.0
+margin_bottom = 51.0
+rect_pivot_offset = Vector2( -320, 64 )
+custom_fonts/font = ExtResource( 4 )
+text = "Pick yo fit"
+align = 1
+
+[node name="DemoPlayers" type="GridContainer" parent="Column"]
+margin_top = 61.0
+margin_right = 972.0
+margin_bottom = 391.0
+rect_min_size = Vector2( 0, 330 )
+columns = 2
+
+[node name="P1" type="AnimatedSprite" parent="Column/DemoPlayers"]
+material = ExtResource( 6 )
+position = Vector2( 801, 121 )
+scale = Vector2( 0.75, 0.75 )
+frames = ExtResource( 5 )
+animation = "Idle"
+frame = 3
+playing = true
+
+[node name="P2" type="AnimatedSprite" parent="Column/DemoPlayers"]
+material = ExtResource( 3 )
+position = Vector2( 160, 120 )
+scale = Vector2( 0.75, 0.75 )
+frames = ExtResource( 5 )
+animation = "Idle"
+playing = true
+flip_h = true
+
+[node name="Colors" type="GridContainer" parent="Column"]
+margin_top = 401.0
+margin_right = 972.0
+margin_bottom = 507.0
+custom_constants/hseparation = 60
+columns = 2
+
+[node name="P1_Select" type="GridContainer" parent="Column/Colors"]
+margin_right = 453.0
+margin_bottom = 106.0
+custom_constants/hseparation = 20
+columns = 2
+
+[node name="P1 Headband" type="Label" parent="Column/Colors/P1_Select"]
+margin_right = 333.0
+margin_bottom = 51.0
+rect_pivot_offset = Vector2( -320, 64 )
+custom_fonts/font = ExtResource( 4 )
+text = "P1 Headband "
+
+[node name="P1_Head_Color" type="ColorPickerButton" parent="Column/Colors/P1_Select"]
+margin_left = 353.0
+margin_right = 453.0
+margin_bottom = 51.0
+rect_min_size = Vector2( 100, 0 )
+color = Color( 0.427451, 0.72549, 0.870588, 1 )
+
+[node name="P1 Body" type="Label" parent="Column/Colors/P1_Select"]
+margin_top = 55.0
+margin_right = 333.0
+margin_bottom = 106.0
+rect_pivot_offset = Vector2( -320, 64 )
+custom_fonts/font = ExtResource( 4 )
+text = "P1 Body"
+
+[node name="P1_Body_Color" type="ColorPickerButton" parent="Column/Colors/P1_Select"]
+margin_left = 353.0
+margin_top = 55.0
+margin_right = 453.0
+margin_bottom = 106.0
+color = Color( 1, 1, 1, 1 )
+
+[node name="P2_Select" type="GridContainer" parent="Column/Colors"]
+margin_left = 513.0
+margin_right = 972.0
+margin_bottom = 106.0
+custom_constants/hseparation = 20
+columns = 2
+
+[node name="P2 Headband" type="Label" parent="Column/Colors/P2_Select"]
+margin_right = 339.0
+margin_bottom = 51.0
+rect_pivot_offset = Vector2( -320, 64 )
+custom_fonts/font = ExtResource( 4 )
+text = "P2 Headband "
+
+[node name="P2_Head_Color" type="ColorPickerButton" parent="Column/Colors/P2_Select"]
+margin_left = 359.0
+margin_right = 459.0
+margin_bottom = 51.0
+rect_min_size = Vector2( 100, 0 )
+color = Color( 1, 0.509804, 0.509804, 1 )
+
+[node name="P2 Body" type="Label" parent="Column/Colors/P2_Select"]
+margin_top = 55.0
+margin_right = 339.0
+margin_bottom = 106.0
+rect_pivot_offset = Vector2( -320, 64 )
+custom_fonts/font = ExtResource( 4 )
+text = "P2 Body"
+
+[node name="P2_Body_Color" type="ColorPickerButton" parent="Column/Colors/P2_Select"]
+margin_left = 359.0
+margin_top = 55.0
+margin_right = 459.0
+margin_bottom = 106.0
+color = Color( 1, 1, 1, 1 )
+
+[node name="Start" type="Button" parent="Column"]
+margin_top = 517.0
+margin_right = 972.0
+margin_bottom = 564.0
+custom_fonts/font = ExtResource( 2 )
+text = "Ready?"
+flat = true
+icon_align = 1
+__meta__ = {
+"_editor_description_": ""
+}
+
+[connection signal="color_changed" from="Column/Colors/P1_Select/P1_Head_Color" to="." method="_on_P1_Head_Color_color_changed"]
+[connection signal="color_changed" from="Column/Colors/P1_Select/P1_Body_Color" to="." method="_on_P1_Body_Color_color_changed"]
+[connection signal="color_changed" from="Column/Colors/P2_Select/P2_Head_Color" to="." method="_on_P2_Head_Color_color_changed"]
+[connection signal="color_changed" from="Column/Colors/P2_Select/P2_Body_Color" to="." method="_on_P2_Body_Color_color_changed"]
+[connection signal="pressed" from="Column/Start" to="." method="_on_Start_pressed"]

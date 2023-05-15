@@ -1,0 +1,212 @@
+fe48dcb8 Godot_Files/Game/health/Health.gd (Haoyu Li 2022-11-06 18:25:00 -0500  1) extends Node
+fe48dcb8 Godot_Files/Game/health/Health.gd (Haoyu Li 2022-11-06 18:25:00 -0500  2)
+fe48dcb8 Godot_Files/Game/health/Health.gd (Haoyu Li 2022-11-06 18:25:00 -0500  3) signal max_changed(new_max)
+fe48dcb8 Godot_Files/Game/health/Health.gd (Haoyu Li 2022-11-06 18:25:00 -0500  4) signal changed(new_health)
+fe48dcb8 Godot_Files/Game/health/Health.gd (Haoyu Li 2022-11-06 18:25:00 -0500  5) signal end_game
+fe48dcb8 Godot_Files/Game/health/Health.gd (Haoyu Li 2022-11-06 18:25:00 -0500  6) export (int) var max_health = 10 set>
+fe48dcb8 Godot_Files/Game/health/Health.gd (Haoyu Li 2022-11-06 18:25:00 -0500  7)
+fe48dcb8 Godot_Files/Game/health/Health.gd (Haoyu Li 2022-11-06 18:25:00 -0500  8) onready var current = max_health set>
+fe48dcb8 Godot_Files/Game/health/Health.gd (Haoyu Li 2022-11-06 18:25:00 -0500  9)
+fe48dcb8 Godot_Files/Game/health/Health.gd (Haoyu Li 2022-11-06 18:25:00 -0500 10) func _read():
+fe48dcb8 Godot_Files/Game/health/Health.gd (Haoyu Li 2022-11-06 18:25:00 -0500 11)      _initialze();
+fe48dcb8 Godot_Files/Game/health/Health.gd (Haoyu Li 2022-11-06 18:25:00 -0500 12)
+fe48dcb8 Godot_Files/Game/health/Health.gd (Haoyu Li 2022-11-06 18:25:00 -0500 13) func set_max(new_max):
+fe48dcb8 Godot_Files/Game/health/Health.gd (Haoyu Li 2022-11-06 18:25:00 -0500 14)      max_health = new_max;
+fe48dcb8 Godot_Files/Game/health/Health.gd (Haoyu Li 2022-11-06 18:25:00 -0500 15)      max_health = max(1, new_max);
+fe48dcb8 Godot_Files/Game/health/Health.gd (Haoyu Li 2022-11-06 18:25:00 -0500 16)      emit_signal("max_changed", max_>
+fe48dcb8 Godot_Files/Game/health/Health.gd (Haoyu Li 2022-11-06 18:25:00 -0500 17)
+fe48dcb8 Godot_Files/Game/health/Health.gd (Haoyu Li 2022-11-06 18:25:00 -0500 18) func set_current(new_value):
+fe48dcb8 Godot_Files/Game/health/Health.gd (Haoyu Li 2022-11-06 18:25:00 -0500 19)      current = new_value;
+fe48dcb8 Godot_Files/Game/health/Health.gd (Haoyu Li 2022-11-06 18:25:00 -0500 20)      current = clamp(current, 0, max>
+fe48dcb8 Godot_Files/Game/health/Health.gd (Haoyu Li 2022-11-06 18:25:00 -0500 21)      emit_signal("changed", current);
+fe48dcb8 Godot_Files/Game/health/Health.gd (Haoyu Li 2022-11-06 18:25:00 -0500 22)
+fe48dcb8 Godot_Files/Game/health/Health.gd (Haoyu Li 2022-11-06 18:25:00 -0500 23)      if current == 0:
+fe48dcb8 Godot_Files/Game/health/Health.gd (Haoyu Li 2022-11-06 18:25:00 -0500 24)              emit_signal("end_game")
+fe48dcb8 Godot_Files/Game/health/Health.gd (Haoyu Li 2022-11-06 18:25:00 -0500 25)
+fe48dcb8 Godot_Files/Game/health/Health.gd (Haoyu Li 2022-11-06 18:25:00 -0500 26)
+fe48dcb8 Godot_Files/Game/health/Health.gd (Haoyu Li 2022-11-06 18:25:00 -0500 27) func _initialze():
+fe48dcb8 Godot_Files/Game/health/Health.gd (Haoyu Li 2022-11-06 18:25:00 -0500 28)      emit_signal("max_changed", max_>
+fe48dcb8 Godot_Files/Game/health/Health.gd (Haoyu Li 2022-11-06 18:25:00 -0500 29)      emit_signal("changed", current);
+fe48dcb8 Godot_Files/Game/health/Health.gd (Haoyu Li 2022-11-06 18:25:00 -0500 30)
+fe48dcb8 Godot_Files/Game/health/Health.gd (Haoyu Li 2022-11-06 18:25:00 -0500 31) func readhit():
+fe48dcb8 Godot_Files/Game/health/Health.gd (Haoyu Li 2022-11-06 18:25:00 -0500 32)      set_current(current - 1)
+fe48dcb8 Godot_Files/Game/health/Health.gd (Haoyu Li 2022-11-06 18:25:00 -0500 33)
+
+fe48dcb8 Godot_Files/Game/health/Health.tscn (Haoyu Li 2022-11-06 18:25:00 -0500 1) [gd_scene load_steps=2 format=2]
+fe48dcb8 Godot_Files/Game/health/Health.tscn (Haoyu Li 2022-11-06 18:25:00 -0500 2)
+fe48dcb8 Godot_Files/Game/health/Health.tscn (Haoyu Li 2022-11-06 18:25:00 -0500 3) [ext_resource path="res://Game/health/Health.gd" type="Script" id=1]
+fe48dcb8 Godot_Files/Game/health/Health.tscn (Haoyu Li 2022-11-06 18:25:00 -0500 4)
+fe48dcb8 Godot_Files/Game/health/Health.tscn (Haoyu Li 2022-11-06 18:25:00 -0500 5) [node name="Health" type="Node"]
+fe48dcb8 Godot_Files/Game/health/Health.tscn (Haoyu Li 2022-11-06 18:25:00 -0500 6) script = ExtResource( 1 )
+
+fe48dcb8 Godot_Files/Game/health/ProgressBar.tscn (Haoyu Li 2022-11-06 18:25:00 -0500  1) [gd_scene load_steps=3 format=2]
+fe48dcb8 Godot_Files/Game/health/ProgressBar.tscn (Haoyu Li 2022-11-06 18:25:00 -0500  2)
+fe48dcb8 Godot_Files/Game/health/ProgressBar.tscn (Haoyu Li 2022-11-06 18:25:00 -0500  3) [sub_resource type="StyleBoxFlat" id=1]
+fe48dcb8 Godot_Files/Game/health/ProgressBar.tscn (Haoyu Li 2022-11-06 18:25:00 -0500  4) bg_color = Color( 0, 0, 0, 1 )
+fe48dcb8 Godot_Files/Game/health/ProgressBar.tscn (Haoyu Li 2022-11-06 18:25:00 -0500  5) border_width_left = 2
+fe48dcb8 Godot_Files/Game/health/ProgressBar.tscn (Haoyu Li 2022-11-06 18:25:00 -0500  6) border_width_top = 2
+fe48dcb8 Godot_Files/Game/health/ProgressBar.tscn (Haoyu Li 2022-11-06 18:25:00 -0500  7) border_width_right = 2
+fe48dcb8 Godot_Files/Game/health/ProgressBar.tscn (Haoyu Li 2022-11-06 18:25:00 -0500  8) border_width_bottom = 2
+fe48dcb8 Godot_Files/Game/health/ProgressBar.tscn (Haoyu Li 2022-11-06 18:25:00 -0500  9) border_color = Color( 1, 1, 1, 1 )
+fe48dcb8 Godot_Files/Game/health/ProgressBar.tscn (Haoyu Li 2022-11-06 18:25:00 -0500 10)
+fe48dcb8 Godot_Files/Game/health/ProgressBar.tscn (Haoyu Li 2022-11-06 18:25:00 -0500 11) [sub_resource type="StyleBoxFlat" id=2]
+fe48dcb8 Godot_Files/Game/health/ProgressBar.tscn (Haoyu Li 2022-11-06 18:25:00 -0500 12) bg_color = Color( 1, 1, 1, 1 )
+fe48dcb8 Godot_Files/Game/health/ProgressBar.tscn (Haoyu Li 2022-11-06 18:25:00 -0500 13)
+fe48dcb8 Godot_Files/Game/health/ProgressBar.tscn (Haoyu Li 2022-11-06 18:25:00 -0500 14) [node name="ProgressBar" type="ProgressBar"]
+fe48dcb8 Godot_Files/Game/health/ProgressBar.tscn (Haoyu Li 2022-11-06 18:25:00 -0500 15) margin_right = 256.0
+fe48dcb8 Godot_Files/Game/health/ProgressBar.tscn (Haoyu Li 2022-11-06 18:25:00 -0500 16) margin_bottom = 24.0
+fe48dcb8 Godot_Files/Game/health/ProgressBar.tscn (Haoyu Li 2022-11-06 18:25:00 -0500 17) custom_styles/fg = SubResource( 1 )
+fe48dcb8 Godot_Files/Game/health/ProgressBar.tscn (Haoyu Li 2022-11-06 18:25:00 -0500 18) custom_styles/bg = SubResource( 2 )
+fe48dcb8 Godot_Files/Game/health/ProgressBar.tscn (Haoyu Li 2022-11-06 18:25:00 -0500 19) value = 50.0
+fe48dcb8 Godot_Files/Game/health/ProgressBar.tscn (Haoyu Li 2022-11-06 18:25:00 -0500 20) percent_visible = false
+
+8db7a0d8 Godot_Files/Game/Display time.gd (Bee Bussell 2022-11-06 21:09:30 -0500 14)    var secondsElapsed = get_parent().Displaytime
+8db7a0d8 Godot_Files/Game/Display time.gd (Bee Bussell 2022-11-06 21:09:30 -0500 15)    var seconds = secondsElapsed
+5bd423e5 Godot_Files/Game/Display time.gd (Haoyu Li    2022-11-07 13:12:11 -0500 16)    #var minute = seconds / 60;
+5bd423e5 Godot_Files/Game/Display time.gd (Haoyu Li    2022-11-07 13:12:11 -0500 17)    #var second = seconds % 60;
+8db7a0d8 Godot_Files/Game/Display time.gd (Bee Bussell 2022-11-06 21:09:30 -0500 18)    #var Displaystr = "%02d:%02d" % [minute, second];
+5bd423e5 Godot_Files/Game/Display time.gd (Haoyu Li    2022-11-07 13:12:11 -0500 19)
+8db7a0d8 Godot_Files/Game/Display time.gd (Bee Bussell 2022-11-06 21:09:30 -0500 20)    var Displaystr = "%d" % [100-seconds]
+2c658674 Godot Files/Game/Display time.gd (Haoyu Li    2022-10-25 08:34:17 -0400 21)    text = Displaystr;
+5bd423e5 Godot_Files/Game/Display time.gd (Haoyu Li    2022-11-07 13:12:11 -0500 22)
+5bd423e5 Godot_Files/Game/Display time.gd (Haoyu Li    2022-11-07 13:12:11 -0500 23)    if (seconds == 100):
+5bd423e5 Godot_Files/Game/Display time.gd (Haoyu Li    2022-11-07 13:12:11 -0500 24)            get_tree().change_scene("res://MainMenu/Main Menu.tscn")
+
+fe40a2c9 Godot_Files/Game/Scripts/PlayerScript.gd (Haoyu Li    2022-11-07 16:04:47 -0500 109)   #MusicControl.stop()
+fe40a2c9 Godot_Files/Game/Scripts/PlayerScript.gd (Haoyu Li    2022-11-07 16:04:47 -0500 110)   MusicControl._paly_battle_music()
+fe40a2c9 Godot_Files/Game/Scripts/PlayerScript.gd (Haoyu Li    2022-11-07 16:04:47 -0500 111)
+
+fe40a2c9 Godot_Files/MainMenu/Scripts/MainMenu.gd (Haoyu Li    2022-11-07 16:04:47 -0500 12)
+fe40a2c9 Godot_Files/MainMenu/Scripts/MainMenu.gd (Haoyu Li    2022-11-07 16:04:47 -0500 13)    MusicControl._paly_basic_music()
+fe40a2c9 Godot_Files/MainMenu/Scripts/MainMenu.gd (Haoyu Li    2022-11-07 16:04:47 -0500 14)
+
+fe40a2c9 Godot_Files/Music/music_control.gd (Haoyu Li 2022-11-07 16:04:47 -0500  1) extends Node
+fe40a2c9 Godot_Files/Music/music_control.gd (Haoyu Li 2022-11-07 16:04:47 -0500  2)
+fe40a2c9 Godot_Files/Music/music_control.gd (Haoyu Li 2022-11-07 16:04:47 -0500  3) var battle_music = load("res://Music/chunli.mp3");
+fe40a2c9 Godot_Files/Music/music_control.gd (Haoyu Li 2022-11-07 16:04:47 -0500  4) var basic_music = load("res://Music/gilu.wav");
+3260f3e9 Godot Files/Music/music_control.gd (Haoyu Li 2022-11-08 09:15:34 -0500  5) var hit_sound = load("");
+fe40a2c9 Godot_Files/Music/music_control.gd (Haoyu Li 2022-11-07 16:04:47 -0500  6) var stop_music = true
+fe40a2c9 Godot_Files/Music/music_control.gd (Haoyu Li 2022-11-07 16:04:47 -0500  7) func _ready():
+fe40a2c9 Godot_Files/Music/music_control.gd (Haoyu Li 2022-11-07 16:04:47 -0500  8)     pass
+fe40a2c9 Godot_Files/Music/music_control.gd (Haoyu Li 2022-11-07 16:04:47 -0500  9)
+fe40a2c9 Godot_Files/Music/music_control.gd (Haoyu Li 2022-11-07 16:04:47 -0500 10) func _paly_battle_music():
+fe40a2c9 Godot_Files/Music/music_control.gd (Haoyu Li 2022-11-07 16:04:47 -0500 11)     $Music.stop()
+fe40a2c9 Godot_Files/Music/music_control.gd (Haoyu Li 2022-11-07 16:04:47 -0500 12)     $Music.stream = battle_music
+fe40a2c9 Godot_Files/Music/music_control.gd (Haoyu Li 2022-11-07 16:04:47 -0500 13)     $Music.play()
+fe40a2c9 Godot_Files/Music/music_control.gd (Haoyu Li 2022-11-07 16:04:47 -0500 14)     stop_music = true
+fe40a2c9 Godot_Files/Music/music_control.gd (Haoyu Li 2022-11-07 16:04:47 -0500 15)
+fe40a2c9 Godot_Files/Music/music_control.gd (Haoyu Li 2022-11-07 16:04:47 -0500 16) func _paly_basic_music():
+fe40a2c9 Godot_Files/Music/music_control.gd (Haoyu Li 2022-11-07 16:04:47 -0500 17)     if stop_music:
+fe40a2c9 Godot_Files/Music/music_control.gd (Haoyu Li 2022-11-07 16:04:47 -0500 18)             stop_music = false
+fe40a2c9 Godot_Files/Music/music_control.gd (Haoyu Li 2022-11-07 16:04:47 -0500 19)             $Music.stop()
+fe40a2c9 Godot_Files/Music/music_control.gd (Haoyu Li 2022-11-07 16:04:47 -0500 20)             $Music.stream = basic_music
+fe40a2c9 Godot_Files/Music/music_control.gd (Haoyu Li 2022-11-07 16:04:47 -0500 21)             $Music.play()
+fe40a2c9 Godot_Files/Music/music_control.gd (Haoyu Li 2022-11-07 16:04:47 -0500 22)
+fe40a2c9 Godot_Files/Music/music_control.gd (Haoyu Li 2022-11-07 16:04:47 -0500 23) func stop():
+fe40a2c9 Godot_Files/Music/music_control.gd (Haoyu Li 2022-11-07 16:04:47 -0500 24)     $Music.stop()
+3260f3e9 Godot Files/Music/music_control.gd (Haoyu Li 2022-11-08 09:15:34 -0500 25)
+3260f3e9 Godot Files/Music/music_control.gd (Haoyu Li 2022-11-08 09:15:34 -0500 26) func sf_attack():
+3260f3e9 Godot Files/Music/music_control.gd (Haoyu Li 2022-11-08 09:15:34 -0500 27)     $hit.stop()
+3260f3e9 Godot Files/Music/music_control.gd (Haoyu Li 2022-11-08 09:15:34 -0500 28)     $hit.stream = hit_sound
+3260f3e9 Godot Files/Music/music_control.gd (Haoyu Li 2022-11-08 09:15:34 -0500 29)     $hit.play()
+
+fe40a2c9 Godot_Files/Music/music_control.tscn (Haoyu Li 2022-11-07 16:04:47 -0500  1) [gd_scene load_steps=2 format=2]
+fe40a2c9 Godot_Files/Music/music_control.tscn (Haoyu Li 2022-11-07 16:04:47 -0500  2)
+fe40a2c9 Godot_Files/Music/music_control.tscn (Haoyu Li 2022-11-07 16:04:47 -0500  3) [ext_resource path="res://Music/music_control.gd" type="Script" id=1]
+fe40a2c9 Godot_Files/Music/music_control.tscn (Haoyu Li 2022-11-07 16:04:47 -0500  4)
+fe40a2c9 Godot_Files/Music/music_control.tscn (Haoyu Li 2022-11-07 16:04:47 -0500  5) [node name="MusicController" type="Node"]
+fe40a2c9 Godot_Files/Music/music_control.tscn (Haoyu Li 2022-11-07 16:04:47 -0500  6) script = ExtResource( 1 )
+fe40a2c9 Godot_Files/Music/music_control.tscn (Haoyu Li 2022-11-07 16:04:47 -0500  7)
+fe40a2c9 Godot_Files/Music/music_control.tscn (Haoyu Li 2022-11-07 16:04:47 -0500  8) [node name="Music" type="AudioStreamPlayer" parent="."]
+fe40a2c9 Godot_Files/Music/music_control.tscn (Haoyu Li 2022-11-07 16:04:47 -0500  9)
+fe40a2c9 Godot_Files/Music/music_control.tscn (Haoyu Li 2022-11-07 16:04:47 -0500 10) [node name="hit" type="AudioStreamPlayer" parent="."]
+
+0981d6e5 Godot Files/Game/Pause.gd (Haoyu Li 2022-11-08 10:44:49 -0500  8) func _input(event):
+0981d6e5 Godot Files/Game/Pause.gd (Haoyu Li 2022-11-08 10:44:49 -0500  9)      if event.is_action_pressed("ui_cancel"):
+0981d6e5 Godot Files/Game/Pause.gd (Haoyu Li 2022-11-08 10:44:49 -0500 10)              var new_state = !get_tree().paused
+0981d6e5 Godot Files/Game/Pause.gd (Haoyu Li 2022-11-08 10:44:49 -0500 11)              get_tree().paused = new_state
+0981d6e5 Godot Files/Game/Pause.gd (Haoyu Li 2022-11-08 10:44:49 -0500 12)              visible = new_state
+852d98df Godot Files/Game/Pause.gd (Haoyu Li 2022-11-08 15:38:29 -0500 13)
+852d98df Godot Files/Game/Pause.gd (Haoyu Li 2022-11-08 15:38:29 -0500 14) func _on_Continue_Button_pressed():
+852d98df Godot Files/Game/Pause.gd (Haoyu Li 2022-11-08 15:38:29 -0500 15)      print("Continue Button Pressed")
+852d98df Godot Files/Game/Pause.gd (Haoyu Li 2022-11-08 15:38:29 -0500 16)      var new_state = !get_tree().paused
+852d98df Godot Files/Game/Pause.gd (Haoyu Li 2022-11-08 15:38:29 -0500 17)      get_tree().paused = new_state
+852d98df Godot Files/Game/Pause.gd (Haoyu Li 2022-11-08 15:38:29 -0500 18)      visible = new_state
+852d98df Godot Files/Game/Pause.gd (Haoyu Li 2022-11-08 15:38:29 -0500 19)
+852d98df Godot Files/Game/Pause.gd (Haoyu Li 2022-11-08 15:38:29 -0500 20) func _on_Return_main_pressed():
+852d98df Godot Files/Game/Pause.gd (Haoyu Li 2022-11-08 15:38:29 -0500 21)      # continue for everything then return to main menu
+852d98df Godot Files/Game/Pause.gd (Haoyu Li 2022-11-08 15:38:29 -0500 22)      print("Button Pressed Main Menu")
+852d98df Godot Files/Game/Pause.gd (Haoyu Li 2022-11-08 15:38:29 -0500 23)      var new_state = !get_tree().paused
+852d98df Godot Files/Game/Pause.gd (Haoyu Li 2022-11-08 15:38:29 -0500 24)      get_tree().paused = new_state
+852d98df Godot Files/Game/Pause.gd (Haoyu Li 2022-11-08 15:38:29 -0500 25)      visible = new_state
+852d98df Godot Files/Game/Pause.gd (Haoyu Li 2022-11-08 15:38:29 -0500 26)      get_tree().change_scene("res://MainMenu/Main Menu.tscn")
+
+0981d6e5 Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 10:44:49 -0500 166) [node name="CanvasLayer" type="CanvasLayer" parent="."]
+0981d6e5 Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 10:44:49 -0500 167) layer = 20
+0981d6e5 Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 10:44:49 -0500 168)
+0981d6e5 Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 10:44:49 -0500 169) [node name="Pause" type="Control" parent="CanvasLayer"]
+0981d6e5 Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 10:44:49 -0500 170) pause_mode = 2
+0981d6e5 Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 10:44:49 -0500 171) visible = false
+0981d6e5 Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 10:44:49 -0500 172) anchor_right = 1.0
+0981d6e5 Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 10:44:49 -0500 173) anchor_bottom = 1.0
+0981d6e5 Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 10:44:49 -0500 174) script = ExtResource( 1 )
+0981d6e5 Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 10:44:49 -0500 175)
+852d98df Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 15:38:29 -0500 176) [node name="Blackoverlay" type="ColorRect" parent="CanvasLayer/Pause"]
+0981d6e5 Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 10:44:49 -0500 177) anchor_right = 1.0
+0981d6e5 Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 10:44:49 -0500 178) anchor_bottom = 1.0
+852d98df Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 15:38:29 -0500 179) color = Color( 0, 0, 0, 0.388235 )
+852d98df Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 15:38:29 -0500 180)
+852d98df Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 15:38:29 -0500 181) [node name="write frame" type="ColorRect" parent="CanvasLayer/Pause"]
+852d98df Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 15:38:29 -0500 182) anchor_left = 0.5
+852d98df Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 15:38:29 -0500 183) anchor_right = 0.5
+852d98df Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 15:38:29 -0500 184) anchor_bottom = 1.0
+852d98df Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 15:38:29 -0500 185) margin_left = -320.0
+852d98df Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 15:38:29 -0500 186) margin_top = 80.0
+852d98df Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 15:38:29 -0500 187) margin_right = 320.0
+852d98df Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 15:38:29 -0500 188) margin_bottom = -120.0
+852d98df Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 15:38:29 -0500 189)
+852d98df Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 15:38:29 -0500 190) [node name="Pause Menu" type="ColorRect" parent="CanvasLayer/Pause"]
+852d98df Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 15:38:29 -0500 191) anchor_left = 0.5
+852d98df Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 15:38:29 -0500 192) anchor_right = 0.5
+852d98df Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 15:38:29 -0500 193) anchor_bottom = 1.0
+852d98df Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 15:38:29 -0500 194) margin_left = -300.0
+852d98df Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 15:38:29 -0500 195) margin_top = 100.0
+852d98df Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 15:38:29 -0500 196) margin_right = 300.0
+852d98df Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 15:38:29 -0500 197) margin_bottom = -140.0
+852d98df Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 15:38:29 -0500 198) color = Color( 0, 0, 0, 1 )
+852d98df Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 15:38:29 -0500 199)
+852d98df Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 15:38:29 -0500 200) [node name="Label" type="Label" parent="CanvasLayer/Pause/Pause Menu"]
+852d98df Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 15:38:29 -0500 201) margin_left = 160.0
+852d98df Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 15:38:29 -0500 202) margin_top = 80.0
+852d98df Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 15:38:29 -0500 203) margin_right = 460.0
+852d98df Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 15:38:29 -0500 204) margin_bottom = 131.0
+852d98df Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 15:38:29 -0500 205) custom_fonts/font = ExtResource( 2 )
+852d98df Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 15:38:29 -0500 206) text = "Pause menu"
+852d98df Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 15:38:29 -0500 207) align = 1
+852d98df Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 15:38:29 -0500 208)
+852d98df Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 15:38:29 -0500 209) [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Pause/Pause Menu"]
+852d98df Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 15:38:29 -0500 210) margin_left = 160.0
+852d98df Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 15:38:29 -0500 211) margin_top = 240.0
+852d98df Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 15:38:29 -0500 212) margin_right = 460.0
+852d98df Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 15:38:29 -0500 213) margin_bottom = 740.0
+852d98df Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 15:38:29 -0500 214) grow_horizontal = 2
+852d98df Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 15:38:29 -0500 215) grow_vertical = 2
+852d98df Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 15:38:29 -0500 216) theme = ExtResource( 5 )
+852d98df Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 15:38:29 -0500 217)
+852d98df Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 15:38:29 -0500 218) [node name="Continue_Button" type="Button" parent="CanvasLayer/Pause/Pause Menu/VBoxContainer"]
+852d98df Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 15:38:29 -0500 219) margin_right = 300.0
+852d98df Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 15:38:29 -0500 220) margin_bottom = 36.0
+852d98df Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 15:38:29 -0500 221) custom_fonts/font = ExtResource( 3 )
+852d98df Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 15:38:29 -0500 222) text = "Continue"
+852d98df Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 15:38:29 -0500 223)
+852d98df Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 15:38:29 -0500 224) [node name="Return_main" type="Button" parent="CanvasLayer/Pause/Pause Menu/VBoxContainer"]
+852d98df Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 15:38:29 -0500 225) margin_top = 40.0
+852d98df Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 15:38:29 -0500 226) margin_right = 300.0
+852d98df Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 15:38:29 -0500 227) margin_bottom = 76.0
+852d98df Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 15:38:29 -0500 228) custom_fonts/font = ExtResource( 3 )
+852d98df Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 15:38:29 -0500 229) text = "Main Menu"
+0981d6e5 Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 10:44:49 -0500 230)
+37feb0ac Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-10-23 15:26:24 -0400 231) [connection signal="timeout" from="UI/Timer" to="UI" method="_on_Timer_timeout"]
+852d98df Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 15:38:29 -0500 232) [connection signal="pressed" from="CanvasLayer/Pause/Pause Menu/VBoxContainer/Continue_Button" to="CanvasLayer/Pause" me>
+852d98df Godot Files/Game/GameState_KinematicBodyRework.tscn (Haoyu Li    2022-11-08 15:38:29 -0500 233) [connection signal="pressed" from="CanvasLayer/Pause/Pause Menu/VBoxContainer/Return_main" to="CanvasLayer/Pause" method>
+

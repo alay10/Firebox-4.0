@@ -1,0 +1,76 @@
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400  1) extends KinematicBody2D
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400  2) 
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400  3) #setting the intial speed and >
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400  4) export var speed = 40
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400  5) export var Gravity = 5
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400  6) 
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400  7) #defines the 2d motion 
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400  8) var Motion = Vector2.ZERO
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400  9) 
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400 10) # function for movement, now w>
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400 11) # we can set up up and down mo>
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400 12) func _physics_process(delta):
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400 13)        
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400 14)        var Direction = 0
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400 15)        if Input.is_action_pres>
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400 16)                Direction -= 1
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400 17)        if Input.is_action_pres>
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400 18)                Direction += 1
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400 19)        if Direction == 0:
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400 20)                Motion.x = 0
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400 21)        else:
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400 22)                Motion.x = Dire>
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400 23) 
+byte 1627...skipping...
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400  1) extends KinematicBody2D
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400  2) 
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400  3) #setting the intial speed and >
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400  4) export var speed = 40
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400  5) export var Gravity = 5
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400  6) 
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400  7) #defines the 2d motion 
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400  8) var Motion = Vector2.ZERO
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400  9) 
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400 10) # function for movement, now w>
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400 11) # we can set up up and down mo>
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400 12) func _physics_process(delta):
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400 13)        
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400 14)        var Direction = 0
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400 15)        if Input.is_action_pres>
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400 16)                Direction -= 1
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400 17)        if Input.is_action_pres>
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400 18)                Direction += 1
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400 19)        if Direction == 0:
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400 20)                Motion.x = 0
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400 21)        else:
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400 22)                Motion.x = Dire>
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400 23) 
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400 24)        #perform the movement i>
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400 25)        Motion.y += Gravity
+byte 1785...skipping...
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400  1) extends KinematicBody2D
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400  2) 
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400  3) #setting the intial speed and gravity 
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400  4) export var speed = 40
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400  5) export var Gravity = 5
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400  6) 
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400  7) #defines the 2d motion 
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400  8) var Motion = Vector2.ZERO
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400  9) 
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400 10) # function for movement, now we have left and right but 
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400 11) # we can set up up and down movement if needed 
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400 12) func _physics_process(delta):
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400 13)        
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400 14)        var Direction = 0
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400 15)        if Input.is_action_pressed("LEFT"):
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400 16)                Direction -= 1
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400 17)        if Input.is_action_pressed("RIGHT"):
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400 18)                Direction += 1
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400 19)        if Direction == 0:
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400 20)                Motion.x = 0
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400 21)        else:
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400 22)                Motion.x = Direction * speed
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400 23) 
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400 24)        #perform the movement in actual game 
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400 25)        Motion.y += Gravity
+001967a3 (wouyang2 2022-10-09 21:06:28 -0400 26)        Motion = move_and_slide(Motion, Vector2.UP)

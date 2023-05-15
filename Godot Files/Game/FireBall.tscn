@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Game/Scripts/FireBall.gd" type="Script" id=1]
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 69.8125, 70 )
+
+[node name="FireBall" type="Area2D"]
+position = Vector2( -71, -55 )
+z_index = 2
+collision_layer = 0
+collision_mask = 0
+script = ExtResource( 1 )
+HitstunVec = Vector2( 3000, 0 )
+BlockstunVec = Vector2( 2500, 0 )
+Hitstun = 30
+Blockstun = 50
+Damage = 1
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 1.0
+margin_top = -16.0
+margin_right = 141.0
+margin_bottom = 124.0
+color = Color( 0.972549, 0.486275, 0.0980392, 1 )
+
+[node name="hitbox" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( 71.1875, 54 )
+shape = SubResource( 4 )
+
+[connection signal="area_entered" from="." to="." method="_on_FireBall_area_entered"]

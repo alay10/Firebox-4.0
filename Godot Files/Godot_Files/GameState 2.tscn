@@ -1,0 +1,24 @@
+[gd_scene format=2]
+
+[node name="GameState" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 500, 300 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1018.0
+margin_bottom = 609.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+margin_left = 219.0
+margin_top = 188.0
+margin_right = 724.0
+margin_bottom = 762.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 219.0
+margin_top = 188.0
+margin_right = 296.0
+margin_bottom = 253.0
+text = "Start<"

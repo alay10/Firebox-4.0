@@ -1,0 +1,165 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://Game/pause.png" type="Texture" id=4]
+[ext_resource path="res://Game/Scripts/Pause.gd" type="Script" id=6]
+[ext_resource path="res://Game/Player.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Game/UI.gd" type="Script" id=8]
+[ext_resource path="res://Game/AnimatedPlayer/test/Controler.gd" type="Script" id=9]
+[ext_resource path="res://Game/Display time.gd" type="Script" id=10]
+[ext_resource path="res://Game/HealthBar.tscn" type="PackedScene" id=14]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 960.25, 400.438 )
+
+[sub_resource type="ImageTexture" id=1]
+
+[sub_resource type="DynamicFontData" id=5]
+font_path = "res://Fonts/Minecraft.ttf"
+
+[sub_resource type="DynamicFont" id=6]
+size = 50
+font_data = SubResource( 5 )
+
+[sub_resource type="GDScript" id=11]
+
+[sub_resource type="Shader" id=12]
+code = "shader_type canvas_item;
+
+uniform bool hitFX = false;
+
+void fragment() {
+
+	vec4 texture_color = texture(TEXTURE, UV);
+	if (hitFX) {
+		
+		vec3 red = vec3(1,0,0);
+		vec3 redened_texture_rgb = mix(texture_color.rgb, red, 0.6);
+		COLOR = vec4(redened_texture_rgb, texture_color.a);
+	} else {
+		COLOR = texture_color
+	}
+}"
+script = SubResource( 11 )
+
+[sub_resource type="ShaderMaterial" id=15]
+resource_local_to_scene = true
+shader = SubResource( 12 )
+shader_param/hitFX = false
+
+[sub_resource type="ShaderMaterial" id=16]
+resource_local_to_scene = true
+shader = SubResource( 12 )
+shader_param/hitFX = false
+
+[node name="GameState" type="Node2D"]
+script = ExtResource( 9 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 960, 540 )
+current = true
+zoom = Vector2( 1.875, 1.8 )
+
+[node name="BKG" type="Node2D" parent="."]
+
+[node name="BlackRect" type="ColorRect" parent="BKG"]
+margin_right = 1920.0
+margin_bottom = 1080.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="FloorRect" type="ColorRect" parent="BKG"]
+margin_top = 800.0
+margin_right = 1920.0
+margin_bottom = 1077.0
+
+[node name="wallRight2" type="StaticBody2D" parent="."]
+position = Vector2( 1018, 1212 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wallRight2"]
+position = Vector2( -58.25, -11.5625 )
+shape = SubResource( 3 )
+
+[node name="wallLeft" type="StaticBody2D" parent="."]
+position = Vector2( -670, 607 )
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wallLeft"]
+position = Vector2( -289, -209 )
+shape = SubResource( 3 )
+
+[node name="wallRight" type="StaticBody2D" parent="."]
+position = Vector2( 1688, 605 )
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wallRight"]
+position = Vector2( 1192, -205 )
+shape = SubResource( 3 )
+
+[node name="UI" type="Node2D" parent="."]
+script = ExtResource( 8 )
+
+[node name="P2_HealthBar" parent="UI" instance=ExtResource( 14 )]
+position = Vector2( 120, 50 )
+scale = Vector2( 3, 3 )
+color = Color( 1, 0.505882, 0.505882, 1 )
+
+[node name="P1_HealthBar" parent="UI" instance=ExtResource( 14 )]
+position = Vector2( 1800, 50 )
+scale = Vector2( -3, 3 )
+color = Color( 1, 0.505882, 0.505882, 1 )
+
+[node name="TextureButton" type="TextureButton" parent="UI"]
+margin_left = 1840.0
+margin_top = 50.0
+margin_right = 1880.0
+margin_bottom = 90.0
+texture_normal = SubResource( 1 )
+script = ExtResource( 6 )
+
+[node name="Pause" type="Sprite" parent="UI/TextureButton"]
+position = Vector2( 21, 18 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 4 )
+
+[node name="Display time" type="Label" parent="UI"]
+margin_left = 930.0
+margin_top = 50.0
+margin_right = 970.0
+margin_bottom = 101.0
+grow_horizontal = 2
+custom_fonts/font = SubResource( 6 )
+text = "0"
+align = 1
+script = ExtResource( 10 )
+
+[node name="Timer" type="Timer" parent="UI"]
+
+[node name="P1" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1520, 613 )
+
+[node name="PlayerSprite" parent="P1" index="1"]
+material = SubResource( 15 )
+
+[node name="HurtBox" parent="P1" index="3"]
+red_material = SubResource( 15 )
+
+[node name="P2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 400, 613 )
+
+[node name="PlayerSprite" parent="P2" index="1"]
+material = SubResource( 16 )
+
+[node name="kickBox" parent="P2" index="2"]
+collision_layer = 8
+collision_mask = 6
+
+[node name="HurtBox" parent="P2" index="3"]
+collision_layer = 16
+collision_mask = 2
+red_material = SubResource( 16 )
+
+[connection signal="timeout" from="UI/Timer" to="UI" method="_on_Timer_timeout"]
+
+[editable path="P1"]
+[editable path="P2"]

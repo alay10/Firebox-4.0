@@ -1,0 +1,7 @@
+[gd_resource type="AnimatedTexture" load_steps=2 format=2]
+
+[sub_resource type="ImageTexture" id=1]
+
+[resource]
+flags = 7
+frame_0/texture = SubResource( 1 )

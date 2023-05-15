@@ -1,0 +1,81 @@
+[gd_resource type="SpriteFrames" load_steps=12 format=2]
+
+[ext_resource path="res://Game/AnimatedPlayer/Boxf2.0.png" type="Texture" id=1]
+[ext_resource path="res://Game/AnimatedPlayer/Boxf1.png" type="Texture" id=2]
+[ext_resource path="res://Game/AnimatedPlayer/Fireball/Fireball1.png" type="Texture" id=3]
+[ext_resource path="res://Game/AnimatedPlayer/Fireball/Fireball3.png" type="Texture" id=4]
+[ext_resource path="res://Game/AnimatedPlayer/Fireball/Fireball4.png" type="Texture" id=5]
+[ext_resource path="res://Game/AnimatedPlayer/Fireball/Fireball2.png" type="Texture" id=6]
+[ext_resource path="res://Game/AnimatedPlayer/Box-Jump_Punch.png" type="Texture" id=7]
+[ext_resource path="res://Game/AnimatedPlayer/BoxKick1.png" type="Texture" id=8]
+[ext_resource path="res://Game/AnimatedPlayer/Box-Dash.png" type="Texture" id=9]
+[ext_resource path="res://Game/AnimatedPlayer/Box-dashBack.png" type="Texture" id=10]
+[ext_resource path="res://Game/AnimatedPlayer/Boxf2.png" type="Texture" id=11]
+
+[resource]
+animations = [ {
+"frames": [ ExtResource( 10 ) ],
+"loop": true,
+"name": "Airkick",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "Crouch",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 1 ), ExtResource( 1 ), ExtResource( 2 ) ],
+"loop": false,
+"name": "DP",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ) ],
+"loop": true,
+"name": "Dash",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ) ],
+"loop": true,
+"name": "Dashback",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 6 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 2 ) ],
+"loop": false,
+"name": "Fireball",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 8 ), ExtResource( 1 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 4.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 2 ) ],
+"loop": false,
+"name": "Jump",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 2 ) ],
+"loop": false,
+"name": "Jump_punch",
+"speed": 7.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "Low_Kick",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ) ],
+"loop": true,
+"name": "Parry",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "Stand",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ) ],
+"loop": false,
+"name": "Walk",
+"speed": 5.0
+} ]

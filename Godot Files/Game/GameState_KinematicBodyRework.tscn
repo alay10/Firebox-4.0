@@ -1,0 +1,288 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://Game/Pause.gd" type="Script" id=1]
+[ext_resource path="res://Fonts/Title_font.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Fonts/Main Menu.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Game/pause.png" type="Texture" id=4]
+[ext_resource path="res://MainMenu/UI/Main Menu.tres" type="Theme" id=5]
+[ext_resource path="res://Game/Scripts/Pause.gd" type="Script" id=6]
+[ext_resource path="res://Game/Player.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Game/UI.gd" type="Script" id=8]
+[ext_resource path="res://Game/AnimatedPlayer/test/Controler.gd" type="Script" id=9]
+[ext_resource path="res://Game/Display time.gd" type="Script" id=10]
+[ext_resource path="res://Game/materials/redden.tres" type="Shader" id=11]
+[ext_resource path="res://Game/materials/p2Shader.tres" type="Material" id=12]
+[ext_resource path="res://Game/materials/p1Shader.tres" type="Material" id=13]
+[ext_resource path="res://Game/HealthBar.tscn" type="PackedScene" id=14]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 960.25, 400.438 )
+
+[sub_resource type="ImageTexture" id=1]
+
+[sub_resource type="DynamicFontData" id=5]
+font_path = "res://Fonts/Minecraft.ttf"
+
+[sub_resource type="DynamicFont" id=6]
+size = 50
+font_data = SubResource( 5 )
+
+[sub_resource type="ShaderMaterial" id=29]
+resource_local_to_scene = true
+shader = ExtResource( 11 )
+shader_param/shading = false
+shader_param/strength = 0.6
+shader_param/customColor = Vector3( 1, 0, 0 )
+shader_param/headBand = Color( 0.631373, 0.631373, 0.631373, 1 )
+shader_param/body = Color( 0.180392, 0.180392, 0.180392, 1 )
+
+[sub_resource type="ShaderMaterial" id=30]
+resource_local_to_scene = true
+shader = ExtResource( 11 )
+shader_param/shading = false
+shader_param/strength = 0.6
+shader_param/customColor = Vector3( 1, 0, 0 )
+shader_param/headBand = Color( 0.631373, 0.631373, 0.631373, 1 )
+shader_param/body = Color( 0.180392, 0.180392, 0.180392, 1 )
+
+[node name="GameState" type="Node2D"]
+script = ExtResource( 9 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 960, 540 )
+current = true
+zoom = Vector2( 1.875, 1.8 )
+
+[node name="BKG" type="Node2D" parent="."]
+
+[node name="BlackRect" type="ColorRect" parent="BKG"]
+margin_right = 1920.0
+margin_bottom = 1049.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="FloorRect" type="ColorRect" parent="BKG"]
+margin_top = 800.0
+margin_right = 1920.0
+margin_bottom = 1077.0
+
+[node name="wallRight2" type="StaticBody2D" parent="."]
+position = Vector2( 1018, 1212 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wallRight2"]
+position = Vector2( -58.25, -11.5625 )
+shape = SubResource( 3 )
+
+[node name="wallLeft" type="StaticBody2D" parent="."]
+position = Vector2( -670, 607 )
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wallLeft"]
+position = Vector2( -289, -209 )
+shape = SubResource( 3 )
+
+[node name="wallRight" type="StaticBody2D" parent="."]
+position = Vector2( 1688, 605 )
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wallRight"]
+position = Vector2( 1192, -205 )
+shape = SubResource( 3 )
+
+[node name="UI" type="Node2D" parent="."]
+script = ExtResource( 8 )
+
+[node name="P2_HealthBar" parent="UI" instance=ExtResource( 14 )]
+position = Vector2( 120, 50 )
+scale = Vector2( 3, 3 )
+shader = ExtResource( 12 )
+
+[node name="P1_HealthBar" parent="UI" instance=ExtResource( 14 )]
+position = Vector2( 1800, 50 )
+scale = Vector2( -3, 3 )
+shader = ExtResource( 13 )
+
+[node name="PauseButton" type="TextureButton" parent="UI"]
+margin_left = 1835.0
+margin_top = 35.0
+margin_right = 1887.0
+margin_bottom = 97.0
+texture_normal = SubResource( 1 )
+script = ExtResource( 6 )
+
+[node name="Pause" type="Sprite" parent="UI/PauseButton"]
+position = Vector2( 30, 45 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 4 )
+
+[node name="Display time" type="Label" parent="UI"]
+margin_left = 930.0
+margin_top = 50.0
+margin_right = 970.0
+margin_bottom = 101.0
+grow_horizontal = 2
+custom_fonts/font = SubResource( 6 )
+text = "0"
+align = 1
+script = ExtResource( 10 )
+
+[node name="Timer" type="Timer" parent="UI"]
+
+[node name="P1" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1520, 667 )
+scale = Vector2( 0.7, 0.7 )
+shader = ExtResource( 13 )
+
+[node name="PlayerSprite" parent="P1" index="1"]
+material = ExtResource( 13 )
+position = Vector2( -57.4285, -69 )
+
+[node name="HurtBox" parent="P1" index="2"]
+red_material = SubResource( 29 )
+
+[node name="BlockBox" parent="P1" index="3"]
+collision_layer = 0
+
+[node name="kickBox" parent="P1" index="4"]
+collision_mask = 16
+
+[node name="Airkick" parent="P1" index="5"]
+collision_layer = 512
+collision_mask = 4096
+
+[node name="jabBox" parent="P1" index="6"]
+collision_layer = 131072
+collision_mask = 1048576
+
+[node name="DP" parent="P1" index="7"]
+collision_layer = 131072
+collision_mask = 1048576
+
+[node name="Jump_punch" parent="P1" index="8"]
+collision_layer = 512
+collision_mask = 4096
+
+[node name="P2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 400, 669 )
+scale = Vector2( 0.7, 0.7 )
+shader = ExtResource( 12 )
+
+[node name="PlayerSprite" parent="P2" index="1"]
+material = ExtResource( 12 )
+
+[node name="HurtBox" parent="P2" index="2"]
+collision_layer = 4112
+red_material = SubResource( 30 )
+
+[node name="BlockBox" parent="P2" index="3"]
+collision_layer = 4112
+
+[node name="kickBox" parent="P2" index="4"]
+collision_layer = 8
+collision_mask = 4
+
+[node name="Airkick" parent="P2" index="5"]
+collision_layer = 2048
+collision_mask = 1024
+
+[node name="jabBox" parent="P2" index="6"]
+collision_layer = 524288
+collision_mask = 262144
+
+[node name="DP" parent="P2" index="7"]
+collision_layer = 524288
+collision_mask = 262144
+
+[node name="Jump_punch" parent="P2" index="8"]
+collision_layer = 2048
+collision_mask = 1024
+
+[node name="Pause_CanvasLayer" type="CanvasLayer" parent="."]
+layer = 20
+
+[node name="Pause" type="Control" parent="Pause_CanvasLayer"]
+pause_mode = 2
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="Blackoverlay" type="ColorRect" parent="Pause_CanvasLayer/Pause"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.388235 )
+
+[node name="write frame" type="ColorRect" parent="Pause_CanvasLayer/Pause"]
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -320.0
+margin_top = 80.0
+margin_right = 320.0
+margin_bottom = -120.0
+
+[node name="Pause Menu" type="ColorRect" parent="Pause_CanvasLayer/Pause"]
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -300.0
+margin_top = 100.0
+margin_right = 300.0
+margin_bottom = -140.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="HSlider" type="HSlider" parent="Pause_CanvasLayer/Pause/Pause Menu"]
+margin_left = 220.0
+margin_top = 156.0
+margin_right = 412.0
+margin_bottom = 196.0
+min_value = -80.0
+max_value = 0.0
+
+[node name="Label" type="Label" parent="Pause_CanvasLayer/Pause/Pause Menu"]
+margin_left = 160.0
+margin_top = 50.0
+margin_right = 460.0
+margin_bottom = 101.0
+custom_fonts/font = ExtResource( 2 )
+text = "Pause menu"
+align = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Pause_CanvasLayer/Pause/Pause Menu"]
+margin_left = 160.0
+margin_top = 240.0
+margin_right = 460.0
+margin_bottom = 740.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource( 5 )
+
+[node name="Continue_Button" type="Button" parent="Pause_CanvasLayer/Pause/Pause Menu/VBoxContainer"]
+margin_right = 300.0
+margin_bottom = 36.0
+custom_fonts/font = ExtResource( 3 )
+text = "Continue"
+
+[node name="Return_main" type="Button" parent="Pause_CanvasLayer/Pause/Pause Menu/VBoxContainer"]
+margin_top = 40.0
+margin_right = 300.0
+margin_bottom = 76.0
+custom_fonts/font = ExtResource( 3 )
+text = "Main Menu"
+
+[node name="Vol_text" type="Label" parent="Pause_CanvasLayer/Pause/Pause Menu"]
+margin_left = 220.0
+margin_top = 132.0
+margin_right = 412.0
+margin_bottom = 168.0
+text = "MASTER VOL"
+align = 1
+
+[connection signal="timeout" from="UI/Timer" to="UI" method="_on_Timer_timeout"]
+[connection signal="value_changed" from="Pause_CanvasLayer/Pause/Pause Menu/HSlider" to="Pause_CanvasLayer/Pause" method="_on_HSlider_value_changed"]
+[connection signal="pressed" from="Pause_CanvasLayer/Pause/Pause Menu/VBoxContainer/Continue_Button" to="Pause_CanvasLayer/Pause" method="_on_Continue_Button_pressed"]
+[connection signal="pressed" from="Pause_CanvasLayer/Pause/Pause Menu/VBoxContainer/Return_main" to="Pause_CanvasLayer/Pause" method="_on_Return_main_pressed"]
+
+[editable path="P1"]
+[editable path="P2"]

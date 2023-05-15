@@ -1,0 +1,354 @@
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  348) extents = Vector2( 101.625, 50.75 )
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  353) tracks/0/path = NodePath("hitbox:disabled")
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  367) length = 0.25
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  370) tracks/0/path = NodePath("hitbox:disabled")
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  379) "values": [ true, false, true ]
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  382) tracks/1/path = NodePath("ReferenceRect:border_color")
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  388) "times": PoolRealArray( 0, 0.034, 0.25 ),
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  390) "update": 0,
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  391) "values": [ Color( 0, 1, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 0 ) ]
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  392) }
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  393) tracks/2/type = "value"
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  394) tracks/2/path = NodePath("ReferenceRect:rect_scale")
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  395) tracks/2/interp = 1
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  396) tracks/2/loop_wrap = true
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  397) tracks/2/imported = false
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  398) tracks/2/enabled = true
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  399) tracks/2/keys = {
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  400) "times": PoolRealArray( 0, 0.034, 0.25 ),
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  401) "transitions": PoolRealArray( 1, 1, 1 ),
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  402) "update": 0,
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  403) "values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1.5, 1.5 ) ]
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  404) }
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  405) tracks/3/type = "value"
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  406) tracks/3/path = NodePath("ReferenceRect:rect_position")
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  407) tracks/3/interp = 1
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  408) tracks/3/loop_wrap = true
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  409) tracks/3/imported = false
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  410) tracks/3/enabled = true
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  411) tracks/3/keys = {
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  412) "times": PoolRealArray( 0, 0.034, 0.25 ),
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  413) "transitions": PoolRealArray( 1, 1, 1 ),
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  414) "update": 0,
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  415) "values": [ Vector2( -200, -100 ), Vector2( -200, -100 ), Vector2( -250, -125 ) ]
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  416) }
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  417) tracks/4/type = "value"
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  418) tracks/4/path = NodePath("ColorRect:color")
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  419) tracks/4/interp = 1
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  420) tracks/4/loop_wrap = true
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  421) tracks/4/imported = false
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  422) tracks/4/enabled = true
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  423) tracks/4/keys = {
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  424) "times": PoolRealArray( 0, 0.034, 0.25 ),
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  425) "transitions": PoolRealArray( 1, 1, 1 ),
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  426) "update": 0,
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  427) "values": [ Color( 0, 1, 0, 0.588235 ), Color( 0, 1, 0, 0.588235 ), Color( 0, 0, 0, 0 ) ]
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  428) }
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  429) tracks/5/type = "value"
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  430) tracks/5/path = NodePath("ReferenceRect:visible")
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  431) tracks/5/interp = 1
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  432) tracks/5/loop_wrap = true
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  433) tracks/5/imported = false
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  434) tracks/5/enabled = true
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  435) tracks/5/keys = {
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  436) "times": PoolRealArray( 0, 0.25 ),
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  437) "transitions": PoolRealArray( 1, 1 ),
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  439) "values": [ true, false ]
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  440) }
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  441) tracks/6/type = "value"
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  442) tracks/6/path = NodePath("ColorRect:visible")
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  443) tracks/6/interp = 1
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  444) tracks/6/loop_wrap = true
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  445) tracks/6/imported = false
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  446) tracks/6/enabled = true
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  447) tracks/6/keys = {
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  448) "times": PoolRealArray( 0, 0.255 ),
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  449) "transitions": PoolRealArray( 1, 1 ),
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  450) "update": 1,
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  451) "values": [ true, false ]
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  455) extents = Vector2( 106.25, 197.5 )
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  462) tracks/0/path = NodePath("hitbox:disabled")
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  463) tracks/0/interp = 0
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  468) "times": PoolRealArray( 0, 0.22, 0.55 ),
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  469) "transitions": PoolRealArray( 1, 803.415, 1 ),
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  470) "update": 1,
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  471) "values": [ true, false, true ]
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  474) tracks/1/path = NodePath("..:UppercutMotion")
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  475) tracks/1/interp = 2
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  480) "times": PoolRealArray( 0, 0.2, 0.21, 0.595 ),
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  481) "transitions": PoolRealArray( 1, 7.21, 1, 1 ),
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  482) "update": 0,
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  483) "values": [ Vector2( 9500, 0 ), Vector2( 55000, 0 ), Vector2( 0, 117000 ), Vector2( 0, 0 ) ]
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  485) tracks/2/type = "method"
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  486) tracks/2/path = NodePath("../PlayerSprite")
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  492) "times": PoolRealArray( 0 ),
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  493) "transitions": PoolRealArray( 1 ),
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  494) "values": [ {
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  495) "args": [ "DP", false ],
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  496) "method": "play"
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  497) } ]
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  500) tracks/3/path = NodePath("ReferenceRect:border_color")
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  501) tracks/3/interp = 1
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  506) "times": PoolRealArray( 0, 0.5, 0.55, 1 ),
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  507) "transitions": PoolRealArray( 1, 1, 1, 1 ),
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  508) "update": 0,
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  509) "values": [ Color( 1, 1, 0, 1 ), Color( 1, 1, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 0 ) ]
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  512) tracks/4/path = NodePath("ReferenceRect:rect_scale")
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  513) tracks/4/interp = 1
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  518) "times": PoolRealArray( 0, 0.55, 1 ),
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  519) "transitions": PoolRealArray( 1, 1, 1 ),
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  521) "values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1.75, 1.75 ) ]
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  523) tracks/5/type = "value"
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  524) tracks/5/path = NodePath("ReferenceRect:rect_position")
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  530) "times": PoolRealArray( 0, 0.55, 1 ),
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  531) "transitions": PoolRealArray( 1, 1, 1 ),
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  532) "update": 0,
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  533) "values": [ Vector2( -200, -400 ), Vector2( -200, -400 ), Vector2( -275, -550 ) ]
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  534) }
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  535) tracks/6/type = "value"
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  536) tracks/6/path = NodePath("ColorRect:color")
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  537) tracks/6/interp = 1
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  538) tracks/6/loop_wrap = true
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  539) tracks/6/imported = false
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  540) tracks/6/enabled = true
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  541) tracks/6/keys = {
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  542) "times": PoolRealArray( 0, 0.55, 0.6 ),
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  543) "transitions": PoolRealArray( 1, 1, 1 ),
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  544) "update": 0,
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  545) "values": [ Color( 1, 1, 0, 0.588235 ), Color( 1, 1, 0, 0.588235 ), Color( 0, 0, 0, 0 ) ]
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  546) }
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  547) tracks/7/type = "value"
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  548) tracks/7/path = NodePath("ColorRect:rect_scale")
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  549) tracks/7/interp = 1
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  550) tracks/7/loop_wrap = true
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  551) tracks/7/imported = false
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  552) tracks/7/enabled = true
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  553) tracks/7/keys = {
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  554) "times": PoolRealArray( 0, 0.54 ),
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  555) "transitions": PoolRealArray( 1, 1 ),
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  556) "update": 0,
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  557) "values": [ Vector2( 1, 0 ), Vector2( 1, -1 ) ]
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  558) }
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  559) tracks/8/type = "value"
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  560) tracks/8/path = NodePath("ReferenceRect:visible")
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  561) tracks/8/interp = 1
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  562) tracks/8/loop_wrap = true
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  563) tracks/8/imported = false
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  564) tracks/8/enabled = true
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  565) tracks/8/keys = {
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  566) "times": PoolRealArray( 0, 1 ),
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  567) "transitions": PoolRealArray( 1, 1 ),
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  568) "update": 1,
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  569) "values": [ true, false ]
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  570) }
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  571) tracks/9/type = "value"
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  572) tracks/9/path = NodePath("ColorRect:visible")
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  573) tracks/9/interp = 1
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  574) tracks/9/loop_wrap = true
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  575) tracks/9/imported = false
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  576) tracks/9/enabled = true
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  577) tracks/9/keys = {
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  578) "times": PoolRealArray( 0, 1 ),
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  579) "transitions": PoolRealArray( 1, 1 ),
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  580) "update": 1,
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  581) "values": [ true, false ]
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  603) tracks/1/type = "method"
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  604) tracks/1/path = NodePath("../PlayerSprite")
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  618) tracks/2/path = NodePath("ReferenceRect:border_color")
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  624) "times": PoolRealArray( 0, 0.34, 0.37, 0.7 ),
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  625) "transitions": PoolRealArray( 1, 1, 1, 1 ),
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  627) "values": [ Color( 0, 0, 1, 1 ), Color( 0, 0, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 0 ) ]
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  630) tracks/3/path = NodePath("ReferenceRect:rect_scale")
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  636) "times": PoolRealArray( 0, 0.374, 0.697 ),
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  642) tracks/4/path = NodePath("ReferenceRect:rect_position")
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  648) "times": PoolRealArray( 0, 0.374, 0.697 ),
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  651) "values": [ Vector2( -323, 84 ), Vector2( -323, 84 ), Vector2( -375, 80 ) ]
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  652) }
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  653) tracks/5/type = "value"
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  654) tracks/5/path = NodePath("ColorRect:color")
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  655) tracks/5/interp = 1
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  656) tracks/5/loop_wrap = true
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  657) tracks/5/imported = false
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  658) tracks/5/enabled = true
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  659) tracks/5/keys = {
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  660) "times": PoolRealArray( 0, 0.374, 0.4 ),
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  661) "transitions": PoolRealArray( 1, 1, 1 ),
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  662) "update": 0,
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  663) "values": [ Color( 0, 0, 1, 0.588235 ), Color( 0, 0, 1, 0.588235 ), Color( 0, 0, 0, 0 ) ]
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  664) }
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  665) tracks/6/type = "value"
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  666) tracks/6/path = NodePath("ColorRect:rect_scale")
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  667) tracks/6/interp = 1
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  668) tracks/6/loop_wrap = true
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  669) tracks/6/imported = false
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  670) tracks/6/enabled = true
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  671) tracks/6/keys = {
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  672) "times": PoolRealArray( 0, 0.374 ),
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  673) "transitions": PoolRealArray( 1, 1 ),
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  674) "update": 0,
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  675) "values": [ Vector2( 0, 1 ), Vector2( -1, 1 ) ]
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  676) }
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  677) tracks/7/type = "value"
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  678) tracks/7/path = NodePath("ColorRect:visible")
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  679) tracks/7/interp = 1
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  680) tracks/7/loop_wrap = true
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  681) tracks/7/imported = false
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  682) tracks/7/enabled = true
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  683) tracks/7/keys = {
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  684) "times": PoolRealArray( 0, 0.408 ),
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  685) "transitions": PoolRealArray( 1, 1 ),
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  686) "update": 1,
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  687) "values": [ true, false ]
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  688) }
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  689) tracks/8/type = "value"
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  690) tracks/8/path = NodePath("ReferenceRect:visible")
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  691) tracks/8/interp = 1
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  692) tracks/8/loop_wrap = true
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  693) tracks/8/imported = false
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  694) tracks/8/enabled = true
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  695) tracks/8/keys = {
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  696) "times": PoolRealArray( 0, 0.697 ),
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  697) "transitions": PoolRealArray( 1, 1 ),
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  698) "update": 1,
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  699) "values": [ true, false ]
+c8191cc4 Godot Files/Game/Player.tscn (Dables1     2022-11-28 18:02:35 -0500  700) }
+c8191cc4 Godot Files/Game/Player.tscn (Dables1     2022-11-28 18:02:35 -0500  701) 
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  702) [sub_resource type="Animation" id=13]
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  703) length = 0.001
+c8191cc4 Godot Files/Game/Player.tscn (Dables1     2022-11-28 18:02:35 -0500  704) 
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  705) [sub_resource type="Animation" id=12]
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  706) resource_name = "fire"
+c8191cc4 Godot Files/Game/Player.tscn (Dables1     2022-11-28 18:02:35 -0500  707) tracks/0/type = "value"
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  708) tracks/0/path = NodePath("fireballAnim/ColorRect:color")
+c8191cc4 Godot Files/Game/Player.tscn (Dables1     2022-11-28 18:02:35 -0500  709) tracks/0/interp = 1
+c8191cc4 Godot Files/Game/Player.tscn (Dables1     2022-11-28 18:02:35 -0500  710) tracks/0/loop_wrap = true
+c8191cc4 Godot Files/Game/Player.tscn (Dables1     2022-11-28 18:02:35 -0500  711) tracks/0/imported = false
+c8191cc4 Godot Files/Game/Player.tscn (Dables1     2022-11-28 18:02:35 -0500  712) tracks/0/enabled = true
+c8191cc4 Godot Files/Game/Player.tscn (Dables1     2022-11-28 18:02:35 -0500  713) tracks/0/keys = {
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  714) "times": PoolRealArray( 0, 0.5, 1 ),
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  715) "transitions": PoolRealArray( 1e+06, 1, 1 ),
+c8191cc4 Godot Files/Game/Player.tscn (Dables1     2022-11-28 18:02:35 -0500  716) "update": 0,
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  717) "values": [ Color( 0.972549, 0.486275, 0.0980392, 0.588235 ), Color( 0.972549, 0.486275, 0.0980392, 0.588235 ), Color( 0, 0, 0, 0 ) ]
+c8191cc4 Godot Files/Game/Player.tscn (Dables1     2022-11-28 18:02:35 -0500  718) }
+c8191cc4 Godot Files/Game/Player.tscn (Dables1     2022-11-28 18:02:35 -0500  719) tracks/1/type = "value"
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  720) tracks/1/path = NodePath("fireballAnim/ColorRect:rect_scale")
+c8191cc4 Godot Files/Game/Player.tscn (Dables1     2022-11-28 18:02:35 -0500  721) tracks/1/interp = 1
+c8191cc4 Godot Files/Game/Player.tscn (Dables1     2022-11-28 18:02:35 -0500  722) tracks/1/loop_wrap = true
+c8191cc4 Godot Files/Game/Player.tscn (Dables1     2022-11-28 18:02:35 -0500  723) tracks/1/imported = false
+c8191cc4 Godot Files/Game/Player.tscn (Dables1     2022-11-28 18:02:35 -0500  724) tracks/1/enabled = true
+c8191cc4 Godot Files/Game/Player.tscn (Dables1     2022-11-28 18:02:35 -0500  725) tracks/1/keys = {
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  726) "times": PoolRealArray( 0, 0.5 ),
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  727) "transitions": PoolRealArray( 1, 1 ),
+c8191cc4 Godot Files/Game/Player.tscn (Dables1     2022-11-28 18:02:35 -0500  728) "update": 0,
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  729) "values": [ Vector2( 0, 1 ), Vector2( -1, 1 ) ]
+c8191cc4 Godot Files/Game/Player.tscn (Dables1     2022-11-28 18:02:35 -0500  730) }
+c8191cc4 Godot Files/Game/Player.tscn (Dables1     2022-11-28 18:02:35 -0500  731) tracks/2/type = "value"
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  732) tracks/2/path = NodePath("fireballAnim/ReferenceRect:border_color")
+c8191cc4 Godot Files/Game/Player.tscn (Dables1     2022-11-28 18:02:35 -0500  733) tracks/2/interp = 1
+c8191cc4 Godot Files/Game/Player.tscn (Dables1     2022-11-28 18:02:35 -0500  734) tracks/2/loop_wrap = true
+c8191cc4 Godot Files/Game/Player.tscn (Dables1     2022-11-28 18:02:35 -0500  735) tracks/2/imported = false
+c8191cc4 Godot Files/Game/Player.tscn (Dables1     2022-11-28 18:02:35 -0500  736) tracks/2/enabled = true
+c8191cc4 Godot Files/Game/Player.tscn (Dables1     2022-11-28 18:02:35 -0500  737) tracks/2/keys = {
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  738) "times": PoolRealArray( 0, 0.45, 0.5, 1 ),
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  739) "transitions": PoolRealArray( 1e+06, 1, 1, 1 ),
+c8191cc4 Godot Files/Game/Player.tscn (Dables1     2022-11-28 18:02:35 -0500  740) "update": 0,
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  741) "values": [ Color( 0.972549, 0.486275, 0.0980392, 1 ), Color( 0.972549, 0.486275, 0.0980392, 1 ), Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 0 ) ]
+c8191cc4 Godot Files/Game/Player.tscn (Dables1     2022-11-28 18:02:35 -0500  742) }
+c8191cc4 Godot Files/Game/Player.tscn (Dables1     2022-11-28 18:02:35 -0500  743) tracks/3/type = "value"
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  744) tracks/3/path = NodePath("fireballAnim/ReferenceRect:rect_scale")
+c8191cc4 Godot Files/Game/Player.tscn (Dables1     2022-11-28 18:02:35 -0500  745) tracks/3/interp = 1
+c8191cc4 Godot Files/Game/Player.tscn (Dables1     2022-11-28 18:02:35 -0500  746) tracks/3/loop_wrap = true
+c8191cc4 Godot Files/Game/Player.tscn (Dables1     2022-11-28 18:02:35 -0500  747) tracks/3/imported = false
+c8191cc4 Godot Files/Game/Player.tscn (Dables1     2022-11-28 18:02:35 -0500  748) tracks/3/enabled = true
+c8191cc4 Godot Files/Game/Player.tscn (Dables1     2022-11-28 18:02:35 -0500  749) tracks/3/keys = {
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  750) "times": PoolRealArray( 0, 0.5, 1 ),
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  751) "transitions": PoolRealArray( 1, 1, 1 ),
+c8191cc4 Godot Files/Game/Player.tscn (Dables1     2022-11-28 18:02:35 -0500  752) "update": 0,
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  753) "values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1.5, 1.5 ) ]
+c8191cc4 Godot Files/Game/Player.tscn (Dables1     2022-11-28 18:02:35 -0500  754) }
+c8191cc4 Godot Files/Game/Player.tscn (Dables1     2022-11-28 18:02:35 -0500  755) tracks/4/type = "value"
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  756) tracks/4/path = NodePath("fireballAnim/ReferenceRect:rect_position")
+c8191cc4 Godot Files/Game/Player.tscn (Dables1     2022-11-28 18:02:35 -0500  757) tracks/4/interp = 1
+c8191cc4 Godot Files/Game/Player.tscn (Dables1     2022-11-28 18:02:35 -0500  758) tracks/4/loop_wrap = true
+c8191cc4 Godot Files/Game/Player.tscn (Dables1     2022-11-28 18:02:35 -0500  759) tracks/4/imported = false
+c8191cc4 Godot Files/Game/Player.tscn (Dables1     2022-11-28 18:02:35 -0500  760) tracks/4/enabled = true
+c8191cc4 Godot Files/Game/Player.tscn (Dables1     2022-11-28 18:02:35 -0500  761) tracks/4/keys = {
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  762) "times": PoolRealArray( 0, 0.5, 1 ),
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  763) "transitions": PoolRealArray( 1, 1, 1 ),
+c8191cc4 Godot Files/Game/Player.tscn (Dables1     2022-11-28 18:02:35 -0500  764) "update": 0,
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  765) "values": [ Vector2( -70, -70 ), Vector2( -70, -70 ), Vector2( -105, -105 ) ]
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  767) tracks/5/type = "value"
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  768) tracks/5/path = NodePath("fireballAnim/ReferenceRect:visible")
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  774) "times": PoolRealArray( 0, 1 ),
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  775) "transitions": PoolRealArray( 1, 1 ),
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  776) "update": 1,
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  777) "values": [ true, false ]
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  778) }
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  779) tracks/6/type = "value"
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  780) tracks/6/path = NodePath("fireballAnim/ColorRect:visible")
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  781) tracks/6/interp = 1
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  782) tracks/6/loop_wrap = true
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  783) tracks/6/imported = false
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  784) tracks/6/enabled = true
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  785) tracks/6/keys = {
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  786) "times": PoolRealArray( 0, 1 ),
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  787) "transitions": PoolRealArray( 1, 1 ),
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  788) "update": 1,
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  789) "values": [ true, false ]
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  924) visible = false
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  925) position = Vector2( -100, -50 )
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  933) [node name="ReferenceRect" type="ReferenceRect" parent="jabBox"]
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  934) visible = false
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  935) margin_left = -200.0
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  936) margin_top = -100.0
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  937) margin_right = 1.0
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  938) border_color = Color( 0, 1, 0, 1 )
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  939) border_width = 5.0
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  940) editor_only = false
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  941) 
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  942) [node name="ColorRect" type="ColorRect" parent="jabBox"]
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  943) visible = false
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  944) margin_left = -200.0
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  945) margin_top = -100.0
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  946) color = Color( 0, 1, 0, 0.588235 )
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  947) 
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  958) position = Vector2( -100, -200 )
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  964) margin_left = -200.0
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  965) margin_top = -400.0
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  966) border_color = Color( 1, 1, 0, 1 )
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  967) border_width = 5.0
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  968) editor_only = false
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  975) margin_left = -200.0
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  976) margin_bottom = 400.0
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  977) rect_scale = Vector2( 1, 1e-05 )
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  978) color = Color( 1, 1, 0, 0.588235 )
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  989) visible = false
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  997) margin_left = -158.0
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  998) margin_top = 26.0
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500  999) margin_right = 14.0
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500 1000) margin_bottom = 141.0
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500 1002) rect_scale = Vector2( 1e-05, 1 )
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500 1003) color = Color( 0, 0, 1, 0.588235 )
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500 1012) border_color = Color( 0, 0, 1, 1 )
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500 1013) border_width = 5.0
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500 1014) editor_only = false
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500 1029) visible = false
+c8191cc4 Godot Files/Game/Player.tscn (Dables1     2022-11-28 18:02:35 -0500 1030) margin_left = 70.0
+c8191cc4 Godot Files/Game/Player.tscn (Dables1     2022-11-28 18:02:35 -0500 1031) margin_top = -70.0
+c8191cc4 Godot Files/Game/Player.tscn (Dables1     2022-11-28 18:02:35 -0500 1032) margin_right = 210.0
+c8191cc4 Godot Files/Game/Player.tscn (Dables1     2022-11-28 18:02:35 -0500 1033) margin_bottom = 70.0
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500 1034) rect_scale = Vector2( 1e-05, 1 )
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500 1035) color = Color( 0.972549, 0.486275, 0.0980392, 0.588235 )
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500 1038) visible = false
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500 1039) margin_left = -70.0
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500 1040) margin_top = -70.0
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500 1041) margin_right = 70.0001
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500 1042) margin_bottom = 70.0001
+28fd5ad1 Godot Files/Game/Player.tscn (Dables1     2022-11-30 17:37:57 -0500 1043) border_color = Color( 0.972549, 0.486275, 0.0980392, 1 )
+c8191cc4 Godot Files/Game/Player.tscn (Dables1     2022-11-28 18:02:35 -0500 1044) border_width = 5.0
+c8191cc4 Godot Files/Game/Player.tscn (Dables1     2022-11-28 18:02:35 -0500 1045) editor_only = false
+c8191cc4 Godot Files/Game/Player.tscn (Dables1     2022-11-28 18:02:35 -0500 1046) 
+c8191cc4 Godot Files/Game/Scripts/PlayerScript.gd (Dables1     2022-11-28 18:02:35 -0500 164) 		$fireballAnim.scale.x = -1.5
+c8191cc4 Godot Files/Game/Scripts/PlayerScript.gd (Dables1     2022-11-28 18:02:35 -0500 165) 
+c8191cc4 Godot Files/Game/Scripts/PlayerScript.gd (Dables1     2022-11-28 18:02:35 -0500 182) 		$fireballAnim.scale.x = 1.5
+28fd5ad1 Godot Files/Game/Scripts/PlayerScript.gd (Dables1     2022-11-30 17:37:57 -0500 294) 		Fireball.instance.init(self.position, onLeft(), self, Color("#f87c19"))

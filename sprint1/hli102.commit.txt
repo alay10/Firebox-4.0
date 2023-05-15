@@ -1,0 +1,58 @@
+92192f2a Godot Files/Menu.gd                      (Haoyu Li    2022-09-27 14:45:26 -0400  1) extends Control
+92192f2a Godot Files/Menu.gd                      (Haoyu Li    2022-09-27 14:45:26 -0400  2)
+92192f2a Godot Files/Menu.gd                      (Haoyu Li    2022-09-27 14:45:26 -0400  3)
+92192f2a Godot Files/Menu.gd                      (Haoyu Li    2022-09-27 14:45:26 -0400  4) # Declare member variables here. Examples:
+92192f2a Godot Files/Menu.gd                      (Haoyu Li    2022-09-27 14:45:26 -0400  5) # var a = 2
+92192f2a Godot Files/Menu.gd                      (Haoyu Li    2022-09-27 14:45:26 -0400  6) # var b = "text"
+92192f2a Godot Files/Menu.gd                      (Haoyu Li    2022-09-27 14:45:26 -0400  7)
+92192f2a Godot Files/Menu.gd                      (Haoyu Li    2022-09-27 14:45:26 -0400  8)
+92192f2a Godot Files/Menu.gd                      (Haoyu Li    2022-09-27 14:45:26 -0400  9) # Called when the node enters the scene tree for the first t>
+92192f2a Godot Files/Menu.gd                      (Haoyu Li    2022-09-27 14:45:26 -0400 10) func _ready():
+92192f2a Godot Files/Menu.gd                      (Haoyu Li    2022-09-27 14:45:26 -0400 11)    $VBoxContainer/Start.grab_focus()
+92192f2a Godot Files/Menu.gd                      (Haoyu Li    2022-09-27 14:45:26 -0400 12)    pass # Replace with function body.
+92192f2a Godot Files/Menu.gd                      (Haoyu Li    2022-09-27 14:45:26 -0400 13)
+92192f2a Godot Files/Menu.gd                      (Haoyu Li    2022-09-27 14:45:26 -0400 14)
+92192f2a Godot Files/Menu.gd                      (Haoyu Li    2022-09-27 14:45:26 -0400 15) # Called every frame. 'delta' is the elapsed time since the >
+92192f2a Godot Files/Menu.gd                      (Haoyu Li    2022-09-27 14:45:26 -0400 16) #func _process(delta):
+92192f2a Godot Files/Menu.gd                      (Haoyu Li    2022-09-27 14:45:26 -0400 17) #  pass
+92192f2a Godot Files/Menu.gd                      (Haoyu Li    2022-09-27 14:45:26 -0400 18)
+92192f2a Godot Files/Menu.gd                      (Haoyu Li    2022-09-27 14:45:26 -0400 19)
+294a854a Godot Files/MainMenu/Scripts/MainMenu.gd (Bee Bussell 2022-10-07 14:47:05 -0400 20) #get_tree().change_scene("res://Game/GameState.tscn")
+92192f2a Godot Files/Menu.gd                      (Haoyu Li    2022-09-27 14:45:26 -0400 21)    pass # Replace with function body.
+92192f2a Godot Files/Menu.gd                      (Haoyu Li    2022-09-27 14:45:26 -0400 22)
+92192f2a Godot Files/Menu.gd                      (Haoyu Li    2022-09-27 14:45:26 -0400 23)
+92192f2a Godot Files/Menu.gd                      (Haoyu Li    2022-09-27 14:45:26 -0400 24)
+92192f2a Godot Files/Menu.gd                      (Haoyu Li    2022-09-27 14:45:26 -0400 25) func _on_Quit_pressed():
+92192f2a Godot Files/Menu.gd                      (Haoyu Li    2022-09-27 14:45:26 -0400 26)    get_tree().quit()
+
+6dc9118a Godot Files/MainMenu/Main Menu.tscn (alay10      2022-10-23 18:48:09 -0400 17) [node name="Control" type="Control"]
+6dc9118a Godot Files/MainMenu/Main Menu.tscn (alay10      2022-10-23 18:48:09 -0400 18) anchor_right = 1.0
+6dc9118a Godot Files/MainMenu/Main Menu.tscn (alay10      2022-10-23 18:48:09 -0400 19) anchor_bottom = 1.0
+6dc9118a Godot Files/MainMenu/Main Menu.tscn (alay10      2022-10-23 18:48:09 -0400 27) [node name="VBoxContainer" type="VBoxContainer" parent="."]
+6dc9118a Godot Files/MainMenu/Main Menu.tscn (alay10      2022-10-23 18:48:09 -0400 28) anchor_left = 0.5
+6dc9118a Godot Files/MainMenu/Main Menu.tscn (alay10      2022-10-23 18:48:09 -0400 29) anchor_top = 0.5
+6dc9118a Godot Files/MainMenu/Main Menu.tscn (alay10      2022-10-23 18:48:09 -0400 30) anchor_right = 0.5
+6dc9118a Godot Files/MainMenu/Main Menu.tscn (alay10      2022-10-23 18:48:09 -0400 31) anchor_bottom = 0.5
+6dc9118a Godot Files/MainMenu/Main Menu.tscn (alay10      2022-10-23 18:48:09 -0400 32) margin_left = -96.0
+6dc9118a Godot Files/MainMenu/Main Menu.tscn (alay10      2022-10-23 18:48:09 -0400 33) margin_top = -92.0
+6dc9118a Godot Files/MainMenu/Main Menu.tscn (alay10      2022-10-23 18:48:09 -0400 34) margin_right = 104.0
+6dc9118a Godot Files/MainMenu/Main Menu.tscn (alay10      2022-10-23 18:48:09 -0400 35) margin_bottom = 40.0
+
+
+6dc9118a Godot Files/MainMenu/Main Menu.tscn (alay10      2022-10-23 18:48:09 -0400 45) [node name="Start" type="Button" parent="VBoxContainer"]
+6dc9118a Godot Files/MainMenu/Main Menu.tscn (alay10      2022-10-23 18:48:09 -0400 46) margin_right = 200.0
+6dc9118a Godot Files/MainMenu/Main Menu.tscn (alay10      2022-10-23 18:48:09 -0400 47) margin_bottom = 36.0
+6dc9118a Godot Files/MainMenu/Main Menu.tscn (alay10      2022-10-23 18:48:09 -0400 48) custom_fonts/font = ExtResource( 6 )
+6dc9118a Godot Files/MainMenu/Main Menu.tscn (alay10      2022-10-23 18:48:09 -0400 49) text = "Start"
+
+6dc9118a Godot Files/MainMenu/Main Menu.tscn (alay10      2022-10-23 18:48:09 -0400 53) [node name="Options" type="Button" parent="VBoxContainer"]
+6dc9118a Godot Files/MainMenu/Main Menu.tscn (alay10      2022-10-23 18:48:09 -0400 54) margin_top = 40.0
+6dc9118a Godot Files/MainMenu/Main Menu.tscn (alay10      2022-10-23 18:48:09 -0400 55) margin_right = 200.0
+6dc9118a Godot Files/MainMenu/Main Menu.tscn (alay10      2022-10-23 18:48:09 -0400 56) margin_bottom = 76.0
+6dc9118a Godot Files/MainMenu/Main Menu.tscn (alay10      2022-10-23 18:48:09 -0400 58) text = "Options"
+
+6dc9118a Godot Files/MainMenu/Main Menu.tscn (alay10      2022-10-23 18:48:09 -0400 61) [node name="Quit" type="Button" parent="VBoxContainer"]
+6dc9118a Godot Files/MainMenu/Main Menu.tscn (alay10      2022-10-23 18:48:09 -0400 62) margin_top = 80.0
+e2a0ce1c Godot Files/MainMenu/Main Menu.tscn (Bee Bussell 2022-10-25 14:48:37 -0400 63) margin_right = 200.0
+6dc9118a Godot Files/MainMenu/Main Menu.tscn (alay10      2022-10-23 18:48:09 -0400 64) margin_bottom = 116.0
+6dc9118a Godot Files/MainMenu/Main Menu.tscn (alay10      2022-10-23 18:48:09 -0400 66) text = "Quit"

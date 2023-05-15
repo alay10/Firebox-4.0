@@ -1,0 +1,366 @@
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400  2) 
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400  3) [ext_resource path="res://Game/pause.png" type="Texture" id=1]
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400  4) [ext_resource path="res://Game/Pause.gd" type="Script" id=2]
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 10) 
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 11) [sub_resource type="ImageTexture" id=1]
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 12) 
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 13) [node name="GameState" type="Node2D"]
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 14) 
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 15) [node name="Camera2D" type="Camera2D" parent="."]
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 16) position = Vector2( 960, 540 )
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 17) current = true
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 18) zoom = Vector2( 1.8, 1.8 )
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 19) 
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 20) [node name="BKG" type="Node2D" parent="."]
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 21) 
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 22) [node name="BlackRect" type="ColorRect" parent="BKG"]
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 23) margin_right = 1920.0
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 24) margin_bottom = 1080.0
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 25) color = Color( 0, 0, 0, 1 )
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 26) 
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 27) [node name="FloorRect" type="ColorRect" parent="BKG"]
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 28) margin_top = 800.0
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 29) margin_right = 1920.0
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 30) margin_bottom = 1077.0
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 31) 
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 32) [node name="UI" type="Node2D" parent="."]
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 33) 
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 34) [node name="TextureButton" type="TextureButton" parent="UI"]
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 35) margin_left = 960.0
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 36) margin_top = 50.0
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 37) margin_right = 1000.0
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 38) margin_bottom = 90.0
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 39) texture_normal = SubResource( 1 )
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 40) script = ExtResource( 2 )
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 41) 
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 42) [node name="Pause" type="Sprite" parent="UI/TextureButton"]
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 43) position = Vector2( 21, 18 )
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 44) scale = Vector2( 0.1, 0.1 )
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 45) texture = ExtResource( 1 )
+294a854a Godot Files/Game/Pause.gd (Bee Bussell 2022-10-07 14:47:05 -0400  1) extends TextureButton
+294a854a Godot Files/Game/Pause.gd (Bee Bussell 2022-10-07 14:47:05 -0400 13) func _pressed():
+294a854a Godot Files/Game/Pause.gd (Bee Bussell 2022-10-07 14:47:05 -0400 14) 	print("Button Pressed Main Menu")
+294a854a Godot Files/Game/Pause.gd (Bee Bussell 2022-10-07 14:47:05 -0400 15) 	get_tree().change_scene("res://MainMenu/Main Menu.tscn")
+294a854a Godot Files/Game/Pause.gd (Bee Bussell 2022-10-07 14:47:05 -0400 16) 
+06050be8 (Bee Bussell 2022-10-11 08:56:36 -0400   1) [gd_scene load_steps=12 format=2]
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400   2) 
+98c3a507 (Bee Bussell 2022-10-11 01:57:40 -0400   3) [ext_resource path="res://Game/Scripts/Test player.gd" type="Script" id=1]
+98c3a507 (Bee Bussell 2022-10-11 01:57:40 -0400   4) [ext_resource path="res://Game/Scripts/Changevis.gd" type="Script" id=2]
+98c3a507 (Bee Bussell 2022-10-11 01:57:40 -0400   5) [ext_resource path="res://Game/Scripts/Changevisf.gd" type="Script" id=3]
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400   6) [ext_resource path="res://Game/pause.png" type="Texture" id=4]
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400   7) [ext_resource path="res://Game/AnimatedPlayer/Boxf1.png" type="Texture" id=5]
+98c3a507 (Bee Bussell 2022-10-11 01:57:40 -0400   8) [ext_resource path="res://Game/Scripts/Pause.gd" type="Script" id=6]
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400   9) [ext_resource path="res://Game/AnimatedPlayer/Boxf2.png" type="Texture" id=7]
+98c3a507 (Bee Bussell 2022-10-11 01:57:40 -0400  10) [ext_resource path="res://Game/Scripts/kickBox.gd" type="Script" id=8]
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  11) 
+06050be8 (Bee Bussell 2022-10-11 08:56:36 -0400  12) [sub_resource type="RectangleShape2D" id=3]
+06050be8 (Bee Bussell 2022-10-11 08:56:36 -0400  13) extents = Vector2( 224, 401.75 )
+06050be8 (Bee Bussell 2022-10-11 08:56:36 -0400  14) 
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  15) [sub_resource type="ImageTexture" id=1]
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  16) 
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  17) [sub_resource type="RectangleShape2D" id=2]
+06050be8 (Bee Bussell 2022-10-11 08:56:36 -0400  18) extents = Vector2( 89, 185 )
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  19) 
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  20) [node name="GameState" type="Node2D"]
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  21) 
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  22) [node name="Camera2D" type="Camera2D" parent="."]
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  23) position = Vector2( 960, 540 )
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  24) current = true
+06050be8 (Bee Bussell 2022-10-11 08:56:36 -0400  25) zoom = Vector2( 1.875, 1.8 )
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  26) 
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  27) [node name="BKG" type="Node2D" parent="."]
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  28) 
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  29) [node name="BlackRect" type="ColorRect" parent="BKG"]
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  30) margin_right = 1920.0
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  31) margin_bottom = 1080.0
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  32) color = Color( 0, 0, 0, 1 )
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  33) 
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  34) [node name="FloorRect" type="ColorRect" parent="BKG"]
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  35) margin_top = 800.0
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  36) margin_right = 1920.0
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  37) margin_bottom = 1077.0
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  38) 
+06050be8 (Bee Bussell 2022-10-11 08:56:36 -0400  39) [node name="wallLeft" type="StaticBody2D" parent="."]
+06050be8 (Bee Bussell 2022-10-11 08:56:36 -0400  40) position = Vector2( -670, 607 )
+06050be8 (Bee Bussell 2022-10-11 08:56:36 -0400  41) 
+06050be8 (Bee Bussell 2022-10-11 08:56:36 -0400  42) [node name="CollisionShape2D" type="CollisionShape2D" parent="wallLeft"]
+06050be8 (Bee Bussell 2022-10-11 08:56:36 -0400  43) position = Vector2( 451, -204 )
+06050be8 (Bee Bussell 2022-10-11 08:56:36 -0400  44) shape = SubResource( 3 )
+06050be8 (Bee Bussell 2022-10-11 08:56:36 -0400  45) 
+06050be8 (Bee Bussell 2022-10-11 08:56:36 -0400  46) [node name="wallRight" type="StaticBody2D" parent="."]
+06050be8 (Bee Bussell 2022-10-11 08:56:36 -0400  47) position = Vector2( 1688, 605 )
+06050be8 (Bee Bussell 2022-10-11 08:56:36 -0400  48) 
+06050be8 (Bee Bussell 2022-10-11 08:56:36 -0400  49) [node name="CollisionShape2D" type="CollisionShape2D" parent="wallRight"]
+06050be8 (Bee Bussell 2022-10-11 08:56:36 -0400  50) position = Vector2( 451, -204 )
+06050be8 (Bee Bussell 2022-10-11 08:56:36 -0400  51) shape = SubResource( 3 )
+06050be8 (Bee Bussell 2022-10-11 08:56:36 -0400  52) 
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  53) [node name="UI" type="Node2D" parent="."]
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  54) 
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  55) [node name="TextureButton" type="TextureButton" parent="UI"]
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  56) margin_left = 960.0
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  57) margin_top = 50.0
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  58) margin_right = 1000.0
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  59) margin_bottom = 90.0
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  60) texture_normal = SubResource( 1 )
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  61) script = ExtResource( 6 )
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  62) 
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  63) [node name="Pause" type="Sprite" parent="UI/TextureButton"]
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  64) position = Vector2( 21, 18 )
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  65) scale = Vector2( 0.1, 0.1 )
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  66) texture = ExtResource( 4 )
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  67) 
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  68) [node name="P1" type="KinematicBody2D" parent="."]
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  69) position = Vector2( 1192, 288 )
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  70) script = ExtResource( 1 )
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  71) 
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  72) [node name="CollisionBox" type="CollisionShape2D" parent="P1"]
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  73) position = Vector2( 312.5, 325 )
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  74) shape = SubResource( 2 )
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  75) 
+d213b341 (Bee Bussell 2022-10-11 01:56:16 -0400  76) [node name="Textures" type="TextureRect" parent="P1"]
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  77) margin_right = 512.0
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  78) margin_bottom = 512.0
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  79) texture = ExtResource( 5 )
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  80) script = ExtResource( 2 )
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  81) 
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  82) [node name="TextureRect2" type="TextureRect" parent="P1"]
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  83) margin_right = 512.0
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  84) margin_bottom = 512.0
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  85) texture = ExtResource( 7 )
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  86) script = ExtResource( 3 )
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  87) 
+d213b341 (Bee Bussell 2022-10-11 01:56:16 -0400  88) [node name="HurtBox" type="ColorRect" parent="P1"]
+06050be8 (Bee Bussell 2022-10-11 08:56:36 -0400  89) visible = false
+d213b341 (Bee Bussell 2022-10-11 01:56:16 -0400  90) margin_left = -37.0
+d213b341 (Bee Bussell 2022-10-11 01:56:16 -0400  91) margin_top = 381.0
+d213b341 (Bee Bussell 2022-10-11 01:56:16 -0400  92) margin_right = 263.0
+d213b341 (Bee Bussell 2022-10-11 01:56:16 -0400  93) margin_bottom = 531.0
+d213b341 (Bee Bussell 2022-10-11 01:56:16 -0400  94) color = Color( 1, 0, 0, 0.54902 )
+d213b341 (Bee Bussell 2022-10-11 01:56:16 -0400  95) script = ExtResource( 8 )
+d213b341 (Bee Bussell 2022-10-11 01:56:16 -0400  96) 
+d213b341 (Bee Bussell 2022-10-11 01:56:16 -0400  97) [node name="ReferenceRect" type="ReferenceRect" parent="P1/HurtBox"]
+d213b341 (Bee Bussell 2022-10-11 01:56:16 -0400  98) anchor_right = 1.0
+d213b341 (Bee Bussell 2022-10-11 01:56:16 -0400  99) anchor_bottom = 1.0
+d213b341 (Bee Bussell 2022-10-11 01:56:16 -0400 100) margin_right = -0.100006
+d213b341 (Bee Bussell 2022-10-11 01:56:16 -0400 101) border_width = 5.0
+d213b341 (Bee Bussell 2022-10-11 01:56:16 -0400 102) editor_only = false
+d213b341 (Bee Bussell 2022-10-11 01:56:16 -0400 103) 
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400 104) [node name="P2" type="KinematicBody2D" parent="."]
+06050be8 (Bee Bussell 2022-10-11 08:56:36 -0400 105) position = Vector2( 1694, 605 )
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400 106) script = ExtResource( 1 )
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400 107) forwardSpeed = 300
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400 108) backwardSpeed = 500
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400 109) moveLeft = 65
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400 110) moveRight = 68
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400 111) 
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400 112) [node name="CollisionBox" type="CollisionShape2D" parent="P2"]
+06050be8 (Bee Bussell 2022-10-11 08:56:36 -0400 113) position = Vector2( -1307, 8 )
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400 114) shape = SubResource( 2 )
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400 115) 
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400 116) [node name="TextureRect" type="TextureRect" parent="P2"]
+06050be8 (Bee Bussell 2022-10-11 08:56:36 -0400 117) margin_left = -1506.0
+06050be8 (Bee Bussell 2022-10-11 08:56:36 -0400 118) margin_top = -319.0
+06050be8 (Bee Bussell 2022-10-11 08:56:36 -0400 119) margin_right = -994.0
+06050be8 (Bee Bussell 2022-10-11 08:56:36 -0400 120) margin_bottom = 193.0
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400 121) texture = ExtResource( 5 )
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400 122) flip_h = true
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400 123) script = ExtResource( 2 )
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400 124) move = 68
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400 125) 
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400 126) [node name="TextureRect2" type="TextureRect" parent="P2"]
+06050be8 (Bee Bussell 2022-10-11 08:56:36 -0400 127) margin_left = -1506.0
+06050be8 (Bee Bussell 2022-10-11 08:56:36 -0400 128) margin_top = -319.0
+06050be8 (Bee Bussell 2022-10-11 08:56:36 -0400 129) margin_right = -994.0
+06050be8 (Bee Bussell 2022-10-11 08:56:36 -0400 130) margin_bottom = 193.0
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400 131) texture = ExtResource( 7 )
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400 132) flip_h = true
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400 133) script = ExtResource( 3 )
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400 134) move = 68
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400 135) 
+d213b341 (Bee Bussell 2022-10-11 01:56:16 -0400 136) [node name="HurtBox" type="ColorRect" parent="P2"]
+06050be8 (Bee Bussell 2022-10-11 08:56:36 -0400 137) visible = false
+d213b341 (Bee Bussell 2022-10-11 01:56:16 -0400 138) margin_left = -1221.5
+d213b341 (Bee Bussell 2022-10-11 01:56:16 -0400 139) margin_top = 69.0
+d213b341 (Bee Bussell 2022-10-11 01:56:16 -0400 140) margin_right = -921.5
+d213b341 (Bee Bussell 2022-10-11 01:56:16 -0400 141) margin_bottom = 219.0
+d213b341 (Bee Bussell 2022-10-11 01:56:16 -0400 142) color = Color( 1, 0, 0, 0.54902 )
+d213b341 (Bee Bussell 2022-10-11 01:56:16 -0400 143) script = ExtResource( 8 )
+d213b341 (Bee Bussell 2022-10-11 01:56:16 -0400 144) move = 83
+d213b341 (Bee Bussell 2022-10-11 01:56:16 -0400 145) 
+d213b341 (Bee Bussell 2022-10-11 01:56:16 -0400 146) [node name="ReferenceRect" type="ReferenceRect" parent="P2/HurtBox"]
+d213b341 (Bee Bussell 2022-10-11 01:56:16 -0400 147) anchor_right = 1.0
+d213b341 (Bee Bussell 2022-10-11 01:56:16 -0400 148) anchor_bottom = 1.0
+d213b341 (Bee Bussell 2022-10-11 01:56:16 -0400 149) margin_right = -0.100006
+d213b341 (Bee Bussell 2022-10-11 01:56:16 -0400 150) border_width = 5.0
+d213b341 (Bee Bussell 2022-10-11 01:56:16 -0400 151) editor_only = false
+58d69910 Godot Files/Game/Changevis.gd (Bee Bussell 2022-10-11 01:30:33 -0400  1) extends TextureRect
+58d69910 Godot Files/Game/Changevis.gd (Bee Bussell 2022-10-11 01:30:33 -0400  2) 
+58d69910 Godot Files/Game/Changevis.gd (Bee Bussell 2022-10-11 01:30:33 -0400  3) export var move = KEY_LEFT
+58d69910 Godot Files/Game/Changevis.gd (Bee Bussell 2022-10-11 01:30:33 -0400  4) # Declare member variables here. Examples:
+58d69910 Godot Files/Game/Changevis.gd (Bee Bussell 2022-10-11 01:30:33 -0400  5) # var a = 2
+58d69910 Godot Files/Game/Changevis.gd (Bee Bussell 2022-10-11 01:30:33 -0400  6) # var b = "text"
+58d69910 Godot Files/Game/Changevis.gd (Bee Bussell 2022-10-11 01:30:33 -0400  7) 
+58d69910 Godot Files/Game/Changevis.gd (Bee Bussell 2022-10-11 01:30:33 -0400  8) 
+58d69910 Godot Files/Game/Changevis.gd (Bee Bussell 2022-10-11 01:30:33 -0400  9) # Called when the node enters the scene tree for the first time.
+58d69910 Godot Files/Game/Changevis.gd (Bee Bussell 2022-10-11 01:30:33 -0400 10) func _ready():
+58d69910 Godot Files/Game/Changevis.gd (Bee Bussell 2022-10-11 01:30:33 -0400 11) 	pass # Replace with function body.
+58d69910 Godot Files/Game/Changevis.gd (Bee Bussell 2022-10-11 01:30:33 -0400 12) 
+58d69910 Godot Files/Game/Changevis.gd (Bee Bussell 2022-10-11 01:30:33 -0400 13) func _process(delta):
+58d69910 Godot Files/Game/Changevis.gd (Bee Bussell 2022-10-11 01:30:33 -0400 14) 	if Input.is_key_pressed(move):
+58d69910 Godot Files/Game/Changevis.gd (Bee Bussell 2022-10-11 01:30:33 -0400 15) 		self.visible = false
+58d69910 Godot Files/Game/Changevis.gd (Bee Bussell 2022-10-11 01:30:33 -0400 16) 	else:
+58d69910 Godot Files/Game/Changevis.gd (Bee Bussell 2022-10-11 01:30:33 -0400 17) 		self.visible = true
+58d69910 Godot Files/Game/Changevisf.gd (Bee Bussell 2022-10-11 01:30:33 -0400  1) extends TextureRect
+58d69910 Godot Files/Game/Changevisf.gd (Bee Bussell 2022-10-11 01:30:33 -0400  2) 
+58d69910 Godot Files/Game/Changevisf.gd (Bee Bussell 2022-10-11 01:30:33 -0400  3) export var move = KEY_LEFT
+58d69910 Godot Files/Game/Changevisf.gd (Bee Bussell 2022-10-11 01:30:33 -0400  4) 
+58d69910 Godot Files/Game/Changevisf.gd (Bee Bussell 2022-10-11 01:30:33 -0400  5) # Declare member variables here. Examples:
+58d69910 Godot Files/Game/Changevisf.gd (Bee Bussell 2022-10-11 01:30:33 -0400  6) # var a = 2
+58d69910 Godot Files/Game/Changevisf.gd (Bee Bussell 2022-10-11 01:30:33 -0400  7) # var b = "text"
+58d69910 Godot Files/Game/Changevisf.gd (Bee Bussell 2022-10-11 01:30:33 -0400  8) 
+58d69910 Godot Files/Game/Changevisf.gd (Bee Bussell 2022-10-11 01:30:33 -0400  9) 
+58d69910 Godot Files/Game/Changevisf.gd (Bee Bussell 2022-10-11 01:30:33 -0400 10) # Called when the node enters the scene tree for the first time.
+58d69910 Godot Files/Game/Changevisf.gd (Bee Bussell 2022-10-11 01:30:33 -0400 11) func _ready():
+58d69910 Godot Files/Game/Changevisf.gd (Bee Bussell 2022-10-11 01:30:33 -0400 12) 	self.visible = false
+58d69910 Godot Files/Game/Changevisf.gd (Bee Bussell 2022-10-11 01:30:33 -0400 13) 	pass # Replace with function body.
+58d69910 Godot Files/Game/Changevisf.gd (Bee Bussell 2022-10-11 01:30:33 -0400 14) 
+58d69910 Godot Files/Game/Changevisf.gd (Bee Bussell 2022-10-11 01:30:33 -0400 15) 
+58d69910 Godot Files/Game/Changevisf.gd (Bee Bussell 2022-10-11 01:30:33 -0400 16) func _process(delta):
+58d69910 Godot Files/Game/Changevisf.gd (Bee Bussell 2022-10-11 01:30:33 -0400 17) 	if Input.is_key_pressed(move):
+58d69910 Godot Files/Game/Changevisf.gd (Bee Bussell 2022-10-11 01:30:33 -0400 18) 		self.visible = true
+58d69910 Godot Files/Game/Changevisf.gd (Bee Bussell 2022-10-11 01:30:33 -0400 19) 	else:
+58d69910 Godot Files/Game/Changevisf.gd (Bee Bussell 2022-10-11 01:30:33 -0400 20) 		self.visible = false
+d213b341 Godot Files/Game/Pause.gd (Bee Bussell 2022-10-11 01:56:16 -0400  1) extends TextureButton
+d213b341 Godot Files/Game/Pause.gd (Bee Bussell 2022-10-11 01:56:16 -0400  2) 
+d213b341 Godot Files/Game/Pause.gd (Bee Bussell 2022-10-11 01:56:16 -0400  3) 
+d213b341 Godot Files/Game/Pause.gd (Bee Bussell 2022-10-11 01:56:16 -0400  4) # Declare member variables here. Examples:
+d213b341 Godot Files/Game/Pause.gd (Bee Bussell 2022-10-11 01:56:16 -0400  5) # var a = 2
+d213b341 Godot Files/Game/Pause.gd (Bee Bussell 2022-10-11 01:56:16 -0400  6) # var b = "text"
+d213b341 Godot Files/Game/Pause.gd (Bee Bussell 2022-10-11 01:56:16 -0400  7) 
+d213b341 Godot Files/Game/Pause.gd (Bee Bussell 2022-10-11 01:56:16 -0400  8) 
+d213b341 Godot Files/Game/Pause.gd (Bee Bussell 2022-10-11 01:56:16 -0400  9) # Called when the node enters the scene tree for the first time.
+d213b341 Godot Files/Game/Pause.gd (Bee Bussell 2022-10-11 01:56:16 -0400 10) func _ready():
+d213b341 Godot Files/Game/Pause.gd (Bee Bussell 2022-10-11 01:56:16 -0400 11) 	pass # Replace with function body.
+d213b341 Godot Files/Game/Pause.gd (Bee Bussell 2022-10-11 01:56:16 -0400 12) 
+d213b341 Godot Files/Game/Pause.gd (Bee Bussell 2022-10-11 01:56:16 -0400 13) func _pressed():
+d213b341 Godot Files/Game/Pause.gd (Bee Bussell 2022-10-11 01:56:16 -0400 14) 	print("Button Pressed Main Menu")
+d213b341 Godot Files/Game/Pause.gd (Bee Bussell 2022-10-11 01:56:16 -0400 15) 	get_tree().change_scene("res://MainMenu/Main Menu.tscn")
+d213b341 Godot Files/Game/Pause.gd (Bee Bussell 2022-10-11 01:56:16 -0400 16) 
+d213b341 Godot Files/Game/Pause.gd (Bee Bussell 2022-10-11 01:56:16 -0400 17) 
+d213b341 Godot Files/Game/Pause.gd (Bee Bussell 2022-10-11 01:56:16 -0400 18) # Called every frame. 'delta' is the elapsed time since the previous frame.
+d213b341 Godot Files/Game/Pause.gd (Bee Bussell 2022-10-11 01:56:16 -0400 19) #func _process(delta):
+d213b341 Godot Files/Game/Pause.gd (Bee Bussell 2022-10-11 01:56:16 -0400 20) #	pass
+d213b341 Godot Files/Game/kickBox.gd (Bee Bussell 2022-10-11 01:56:16 -0400  1) extends ColorRect
+d213b341 Godot Files/Game/kickBox.gd (Bee Bussell 2022-10-11 01:56:16 -0400  2) 
+d213b341 Godot Files/Game/kickBox.gd (Bee Bussell 2022-10-11 01:56:16 -0400  3) export var move = KEY_DOWN
+d213b341 Godot Files/Game/kickBox.gd (Bee Bussell 2022-10-11 01:56:16 -0400  4) 
+d213b341 Godot Files/Game/kickBox.gd (Bee Bussell 2022-10-11 01:56:16 -0400  5) # Declare member variables here. Examples:
+d213b341 Godot Files/Game/kickBox.gd (Bee Bussell 2022-10-11 01:56:16 -0400  6) # var a = 2
+d213b341 Godot Files/Game/kickBox.gd (Bee Bussell 2022-10-11 01:56:16 -0400  7) # var b = "text"
+d213b341 Godot Files/Game/kickBox.gd (Bee Bussell 2022-10-11 01:56:16 -0400  8) 
+d213b341 Godot Files/Game/kickBox.gd (Bee Bussell 2022-10-11 01:56:16 -0400  9) 
+d213b341 Godot Files/Game/kickBox.gd (Bee Bussell 2022-10-11 01:56:16 -0400 10) # Called when the node enters the scene tree for the first time.
+d213b341 Godot Files/Game/kickBox.gd (Bee Bussell 2022-10-11 01:56:16 -0400 11) func _ready():
+d213b341 Godot Files/Game/kickBox.gd (Bee Bussell 2022-10-11 01:56:16 -0400 12) 	self.visible = false
+d213b341 Godot Files/Game/kickBox.gd (Bee Bussell 2022-10-11 01:56:16 -0400 13) 	pass # Replace with function body.
+d213b341 Godot Files/Game/kickBox.gd (Bee Bussell 2022-10-11 01:56:16 -0400 14) 
+d213b341 Godot Files/Game/kickBox.gd (Bee Bussell 2022-10-11 01:56:16 -0400 15) 
+d213b341 Godot Files/Game/kickBox.gd (Bee Bussell 2022-10-11 01:56:16 -0400 16) func _process(delta):
+d213b341 Godot Files/Game/kickBox.gd (Bee Bussell 2022-10-11 01:56:16 -0400 17) 	if Input.is_key_pressed(move):
+d213b341 Godot Files/Game/kickBox.gd (Bee Bussell 2022-10-11 01:56:16 -0400 18) 		self.visible = true
+d213b341 Godot Files/Game/kickBox.gd (Bee Bussell 2022-10-11 01:56:16 -0400 19) 	else:
+d213b341 Godot Files/Game/kickBox.gd (Bee Bussell 2022-10-11 01:56:16 -0400 20) 		self.visible = false
+58d69910 Godot Files/Game/Test player.gd         (Bee Bussell 2022-10-11 01:30:33 -0400  1) extends KinematicBody2D
+58d69910 Godot Files/Game/Test player.gd         (Bee Bussell 2022-10-11 01:30:33 -0400  2) 
+58d69910 Godot Files/Game/Test player.gd         (Bee Bussell 2022-10-11 01:30:33 -0400  3) 
+58d69910 Godot Files/Game/Test player.gd         (Bee Bussell 2022-10-11 01:30:33 -0400  4) # Declare member variables here. Examples:
+58d69910 Godot Files/Game/Test player.gd         (Bee Bussell 2022-10-11 01:30:33 -0400  5) # var a = 2
+58d69910 Godot Files/Game/Test player.gd         (Bee Bussell 2022-10-11 01:30:33 -0400  6) # var b = "text"
+58d69910 Godot Files/Game/Test player.gd         (Bee Bussell 2022-10-11 01:30:33 -0400  7) export(int) var forwardSpeed = 500
+58d69910 Godot Files/Game/Test player.gd         (Bee Bussell 2022-10-11 01:30:33 -0400  8) export(int) var backwardSpeed = 300
+58d69910 Godot Files/Game/Test player.gd         (Bee Bussell 2022-10-11 01:30:33 -0400  9) 
+58d69910 Godot Files/Game/Test player.gd         (Bee Bussell 2022-10-11 01:30:33 -0400 10) export var moveLeft = KEY_LEFT
+58d69910 Godot Files/Game/Test player.gd         (Bee Bussell 2022-10-11 01:30:33 -0400 11) export var moveRight = KEY_RIGHT
+58d69910 Godot Files/Game/Test player.gd         (Bee Bussell 2022-10-11 01:30:33 -0400 12) 
+58d69910 Godot Files/Game/Test player.gd         (Bee Bussell 2022-10-11 01:30:33 -0400 13) var friction = 0.5
+58d69910 Godot Files/Game/Test player.gd         (Bee Bussell 2022-10-11 01:30:33 -0400 14) var motion = Vector2(0, 0)
+58d69910 Godot Files/Game/Test player.gd         (Bee Bussell 2022-10-11 01:30:33 -0400 15) 
+58d69910 Godot Files/Game/Test player.gd         (Bee Bussell 2022-10-11 01:30:33 -0400 16) # Called when the node enters the scene tree for the first time.
+58d69910 Godot Files/Game/Test player.gd         (Bee Bussell 2022-10-11 01:30:33 -0400 17) func _ready():
+58d69910 Godot Files/Game/Test player.gd         (Bee Bussell 2022-10-11 01:30:33 -0400 18) 	pass # Replace with function body.
+58d69910 Godot Files/Game/Test player.gd         (Bee Bussell 2022-10-11 01:30:33 -0400 19) 
+58d69910 Godot Files/Game/Test player.gd         (Bee Bussell 2022-10-11 01:30:33 -0400 20) 
+58d69910 Godot Files/Game/Test player.gd         (Bee Bussell 2022-10-11 01:30:33 -0400 21) func _physics_process(delta):
+1ea88758 Godot Files/Game/Scripts/Test player.gd (Bee Bussell 2022-10-11 09:30:34 -0400 22) 	
+58d69910 Godot Files/Game/Test player.gd         (Bee Bussell 2022-10-11 01:30:33 -0400 23) 	if Input.is_key_pressed(moveLeft):
+58d69910 Godot Files/Game/Test player.gd         (Bee Bussell 2022-10-11 01:30:33 -0400 24) 		motion.x = -forwardSpeed
+58d69910 Godot Files/Game/Test player.gd         (Bee Bussell 2022-10-11 01:30:33 -0400 25) 	if Input.is_key_pressed(moveRight):
+58d69910 Godot Files/Game/Test player.gd         (Bee Bussell 2022-10-11 01:30:33 -0400 26) 		motion.x = backwardSpeed
+58d69910 Godot Files/Game/Test player.gd         (Bee Bussell 2022-10-11 01:30:33 -0400 27) 		
+58d69910 Godot Files/Game/Test player.gd         (Bee Bussell 2022-10-11 01:30:33 -0400 28) 	motion.x *= friction
+58d69910 Godot Files/Game/Test player.gd         (Bee Bussell 2022-10-11 01:30:33 -0400 29) 	move_and_slide(motion)
+Binary file (standard input) matches
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400  1) [remap]
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400  2) 
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400  3) importer="texture"
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400  4) type="StreamTexture"
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400  5) path="res://.import/Firebox.png-fc0e42edeef2e536de596adc8557dbf9.stex"
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400  6) metadata={
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400  7) "vram_texture": false
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400  8) }
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400  9) 
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 10) [deps]
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 11) 
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 12) source_file="res://MainMenu/IMG/Firebox.png"
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 13) dest_files=[ "res://.import/Firebox.png-fc0e42edeef2e536de596adc8557dbf9.stex" ]
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 14) 
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 15) [params]
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 16) 
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 17) compress/mode=0
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 18) compress/lossy_quality=0.7
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 19) compress/hdr_mode=0
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 20) compress/bptc_ldr=0
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 21) compress/normal_map=0
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 22) flags/repeat=0
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 23) flags/filter=true
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 24) flags/mipmaps=false
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 25) flags/anisotropic=false
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 26) flags/srgb=2
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 27) process/fix_alpha_border=true
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 28) process/premult_alpha=false
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 29) process/HDR_as_SRGB=false
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 30) process/invert_color=false
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 31) process/normal_map_invert_y=false
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 32) stream=false
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 33) size_limit=0
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 34) detect_3d=true
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 35) svg/scale=1.0
+294a854a Godot Files/MainMenu/Scripts/MainMenu.gd (Bee Bussell 2022-10-07 14:47:05 -0400 20) #get_tree().change_scene("res://Game/GameState.tscn")
+294a854a Godot Files/MainMenu/Scripts/QuitButtton.gd (Bee Bussell 2022-10-07 14:47:05 -0400  1) extends Node
+294a854a Godot Files/MainMenu/Scripts/QuitButtton.gd (Bee Bussell 2022-10-07 14:47:05 -0400 13) func _pressed():
+294a854a Godot Files/MainMenu/Scripts/QuitButtton.gd (Bee Bussell 2022-10-07 14:47:05 -0400 14) 	print("Button Pressed")
+294a854a Godot Files/MainMenu/Scripts/QuitButtton.gd (Bee Bussell 2022-10-07 14:47:05 -0400 15) 	get_tree().quit()
+294a854a Godot Files/MainMenu/Scripts/QuitButtton.gd (Bee Bussell 2022-10-07 14:47:05 -0400 16) 
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  1) extends Button
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  2) 
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  3) 
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  4) # Declare member variables here. Examples:
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  5) # var a = 2
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  6) # var b = "text"
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  7) 
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  8) 
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400  9) # Called when the node enters the scene tree for the first time.
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400 10) func _ready():
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400 11) 	pass # Replace with function body.
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400 12) 
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400 13) func _pressed():
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400 14) 	print("Button Pressed")
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400 15) 	get_tree().change_scene("res://Game/GameState_KinematicBodyRework.tscn")
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400 16) 
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400 17) # Called every frame. 'delta' is the elapsed time since the previous frame.
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400 18) #func _process(delta):
+58d69910 (Bee Bussell 2022-10-11 01:30:33 -0400 19) #	pass
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 1) [gd_resource type="StyleBoxFlat" format=2]
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 2) 
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 3) [resource]
+294a854a (Bee Bussell 2022-10-07 14:47:05 -0400 4) bg_color = Color( 0.6, 0.6, 0.6, 0 )

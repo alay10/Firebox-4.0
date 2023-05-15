@@ -1,0 +1,11 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=2]
+
+[ext_resource path="res://Game/materials/redden.tres" type="Shader" id=1]
+
+[resource]
+shader = ExtResource( 1 )
+shader_param/shading = false
+shader_param/strength = 0.6
+shader_param/customColor = Vector3( 0, 0, 0 )
+shader_param/headBand = Color( 0.427451, 0.72549, 0.870588, 1 )
+shader_param/body = Color( 1, 1, 1, 1 )

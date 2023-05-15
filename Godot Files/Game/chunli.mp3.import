@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/chunli.mp3-8ba56ab1b15e3b0fa00ec9109c82a444.mp3str"
+
+[deps]
+
+source_file="res://Game/chunli.mp3"
+dest_files=[ "res://.import/chunli.mp3-8ba56ab1b15e3b0fa00ec9109c82a444.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

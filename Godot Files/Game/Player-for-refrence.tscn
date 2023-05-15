@@ -1,0 +1,600 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://Game/Scripts/PlayerScript.gd" type="Script" id=1]
+[ext_resource path="res://Game/materials/p1Shader.tres" type="Material" id=2]
+[ext_resource path="res://Game/Scripts/HurtBox.gd" type="Script" id=3]
+[ext_resource path="res://Game/AnimatedPlayer/PlayerAnimation.tres" type="SpriteFrames" id=4]
+[ext_resource path="res://Game/Scripts/Varibles.gd" type="Script" id=14]
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 80.1563, 186.188 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 152.375, 77.25 )
+
+[sub_resource type="Animation" id=11]
+length = 0.001
+
+[sub_resource type="Animation" id=9]
+resource_name = "kick"
+length = 0.5
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("ReferenceRect:border_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.15, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 5, 1 ),
+"update": 0,
+"values": [ Color( 1, 0, 0, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("KickHitboxVisual:rect_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.15 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 1 ), Vector2( -1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("KickHitboxVisual:color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2, 0.25 ),
+"transitions": PoolRealArray( 506429, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 0, 0, 0.784314 ), Color( 1, 0, 0, 0.784314 ), Color( 0, 0, 0, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("ReferenceRect:rect_scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1, 0.5 ),
+"transitions": PoolRealArray( 55.7153, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1.5, 1.5 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("ReferenceRect:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.1, 0.5 ),
+"transitions": PoolRealArray( 10085.4, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -375, 35 ), Vector2( -375, 35 ), Vector2( -450, 0 ) ]
+}
+tracks/5/type = "method"
+tracks/5/path = NodePath("../PlayerSprite")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "Low_Kick", false ],
+"method": "play"
+} ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("hitbox:disabled")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.15, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true ]
+}
+
+[sub_resource type="GDScript" id=19]
+script/source = "extends Area2D
+
+export(Vector2) var HitstunVec
+export(Vector2) var BlockstunVec
+export(int) var Hitstun
+export(int) var Blockstun
+export(int) var Damage
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+"
+
+[sub_resource type="RectangleShape2D" id=20]
+extents = Vector2( 83.5, 50.5 )
+
+[sub_resource type="Animation" id=21]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("visiblePart:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("hitbox:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=22]
+resource_name = "jab"
+length = 0.166667
+step = 0.0166667
+tracks/0/type = "value"
+tracks/0/path = NodePath("visiblePart:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.0333333, 0.0833333 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("hitbox:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.0333333, 0.0833333 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true ]
+}
+
+[sub_resource type="RectangleShape2D" id=15]
+extents = Vector2( 108, 232 )
+
+[sub_resource type="Animation" id=16]
+resource_name = "Dragon punch"
+length = 1.2
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("ReferenceRect:border_color")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.22, 0.55, 0.65, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 0, 0, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.22, 0.55, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true, false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("ColorRect:color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.55, 0.65 ),
+"transitions": PoolRealArray( 1, 3.24904, 0.0291573 ),
+"update": 0,
+"values": [ Color( 1, 0, 0, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 0, 0, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("hitbox:disabled")
+tracks/3/interp = 0
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.22, 0.55 ),
+"transitions": PoolRealArray( 1, 803.415, 1 ),
+"update": 1,
+"values": [ true, false, true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("..:UppercutMotion")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.2, 0.21, 0.595 ),
+"transitions": PoolRealArray( 1, 7.21, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 9500, 0 ), Vector2( 55000, 0 ), Vector2( 0, 117000 ), Vector2( 0, 0 ) ]
+}
+tracks/5/type = "method"
+tracks/5/path = NodePath("../PlayerSprite")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "DP", false ],
+"method": "play"
+} ]
+}
+
+[sub_resource type="RectangleShape2D" id=17]
+extents = Vector2( 83.5, 50.5 )
+
+[sub_resource type="Animation" id=18]
+resource_name = "Jump_punch"
+length = 0.75
+step = 0.0166667
+tracks/0/type = "value"
+tracks/0/path = NodePath("ColorRect:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.366667, 0.45 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath("../PlayerSprite")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "Jump_punch", false ],
+"method": "play"
+} ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("hitbox:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.366667, 0.45 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true ]
+}
+
+[sub_resource type="Animation" id=13]
+length = 0.001
+
+[sub_resource type="Animation" id=12]
+resource_name = "fire"
+tracks/0/type = "value"
+tracks/0/path = NodePath("fireballAnim/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1e+06, 1, 1 ),
+"update": 0,
+"values": [ Color( 0.972549, 0.486275, 0.0980392, 0.588235 ), Color( 0.972549, 0.486275, 0.0980392, 0.588235 ), Color( 0, 0, 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("fireballAnim/ColorRect:rect_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 1 ), Vector2( -1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("fireballAnim/ReferenceRect:border_color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.45, 0.5, 1 ),
+"transitions": PoolRealArray( 1e+06, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0.972549, 0.486275, 0.0980392, 1 ), Color( 0.972549, 0.486275, 0.0980392, 1 ), Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("fireballAnim/ReferenceRect:rect_scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1.5, 1.5 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("fireballAnim/ReferenceRect:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, -16 ), Vector2( 1, -16 ), Vector2( -32, -45 ) ]
+}
+tracks/5/type = "method"
+tracks/5/path = NodePath("PlayerSprite")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "Fireball", false ],
+"method": "play"
+} ]
+}
+
+[node name="P1" type="KinematicBody2D"]
+script = ExtResource( 1 )
+UppercutMotion = Vector2( 9500, 0 )
+
+[node name="CollisionBox" type="CollisionPolygon2D" parent="."]
+modulate = Color( 0.87451, 0.00784314, 1, 1 )
+self_modulate = Color( 0.733333, 0, 1, 1 )
+position = Vector2( 6.25, 1 )
+polygon = PoolVector2Array( -6.25, 186, -79.25, -1, -1.25, -184, 80.75, -1 )
+
+[node name="PlayerSprite" type="AnimatedSprite" parent="."]
+position = Vector2( -56, -69 )
+z_index = 1
+frames = ExtResource( 4 )
+animation = "Stand"
+
+[node name="HurtBox" type="Area2D" parent="."]
+collision_layer = 1028
+collision_mask = 0
+script = ExtResource( 3 )
+red_material = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+position = Vector2( 6.84375, 0.8125 )
+shape = SubResource( 10 )
+
+[node name="BlockBox" type="Area2D" parent="."]
+collision_layer = 1028
+collision_mask = 0
+
+[node name="BlockingBox" type="CollisionShape2D" parent="BlockBox"]
+modulate = Color( 0.290196, 0.54902, 0.54902, 1 )
+position = Vector2( 7, 1 )
+shape = SubResource( 10 )
+
+[node name="kickBox" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 24
+script = ExtResource( 14 )
+__meta__ = {
+"_editor_description_": ""
+}
+HitstunVec = Vector2( 45000, -10000 )
+BlockstunVec = Vector2( 70000, 0 )
+Hitstun = 15
+Blockstun = 30
+Damage = 1
+
+[node name="hitbox" type="CollisionShape2D" parent="kickBox"]
+position = Vector2( -225.625, 111 )
+shape = SubResource( 8 )
+disabled = true
+
+[node name="ReferenceRect" type="ReferenceRect" parent="kickBox"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -375.0
+margin_top = 35.0
+margin_right = -75.0
+margin_bottom = 183.0
+border_width = 5.0
+editor_only = false
+
+[node name="kickAnimation" type="AnimationPlayer" parent="kickBox"]
+anims/RESET = SubResource( 11 )
+anims/kick = SubResource( 9 )
+
+[node name="KickHitboxVisual" type="ColorRect" parent="kickBox"]
+margin_left = -76.0
+margin_top = 36.0
+margin_right = 224.0
+margin_bottom = 186.0
+rect_scale = Vector2( 1e-05, 1 )
+color = Color( 1, 0, 0, 0.784314 )
+
+[node name="jabBox" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 0
+script = SubResource( 19 )
+HitstunVec = Vector2( 35000, 0 )
+BlockstunVec = Vector2( 45000, 0 )
+Hitstun = 8
+Blockstun = 6
+Damage = 1
+
+[node name="hitbox" type="CollisionShape2D" parent="jabBox"]
+visible = false
+position = Vector2( -100, -50 )
+shape = SubResource( 20 )
+disabled = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="jabBox"]
+anims/RESET = SubResource( 21 )
+anims/jab = SubResource( 22 )
+
+[node name="ReferenceRect" type="ReferenceRect" parent="jabBox"]
+visible = false
+margin_left = -200.0
+margin_top = -100.0
+margin_right = 1.0
+border_color = Color( 0, 1, 0, 1 )
+border_width = 5.0
+editor_only = false
+
+[node name="ColorRect" type="ColorRect" parent="jabBox"]
+visible = false
+margin_left = -200.0
+margin_top = -100.0
+color = Color( 0, 1, 0, 0.588235 )
+
+[node name="DP" type="Area2D" parent="."]
+script = ExtResource( 14 )
+HitstunVec = Vector2( 55000, -100000 )
+BlockstunVec = Vector2( 270000, 0 )
+Hitstun = 70
+Blockstun = 35
+Damage = 2
+
+[node name="hitbox" type="CollisionShape2D" parent="DP"]
+visible = false
+position = Vector2( -100, -200 )
+shape = SubResource( 15 )
+disabled = true
+
+[node name="ReferenceRect" type="ReferenceRect" parent="DP"]
+visible = false
+margin_left = -200.0
+margin_top = -400.0
+border_color = Color( 1, 1, 0, 1 )
+border_width = 5.0
+editor_only = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="DP"]
+"anims/Dragon punch" = SubResource( 16 )
+
+[node name="ColorRect" type="ColorRect" parent="DP"]
+visible = false
+margin_left = -200.0
+margin_bottom = 400.0
+rect_scale = Vector2( 1, 1e-05 )
+color = Color( 1, 1, 0, 0.588235 )
+
+[node name="Jump_punch" type="Area2D" parent="."]
+script = ExtResource( 14 )
+HitstunVec = Vector2( 40000, 0 )
+BlockstunVec = Vector2( 50000, 0 )
+Hitstun = 20
+Blockstun = 25
+Damage = 1
+
+[node name="hitbox" type="CollisionShape2D" parent="Jump_punch"]
+visible = false
+position = Vector2( -222.252, 109.04 )
+rotation = -0.349066
+shape = SubResource( 17 )
+disabled = true
+
+[node name="ColorRect" type="ColorRect" parent="Jump_punch"]
+visible = false
+margin_left = -158.0
+margin_top = 26.0
+margin_right = 14.0
+margin_bottom = 141.0
+rect_rotation = -20.0
+rect_scale = Vector2( 1e-05, 1 )
+color = Color( 0, 0, 1, 0.588235 )
+
+[node name="ReferenceRect" type="ReferenceRect" parent="Jump_punch"]
+visible = false
+margin_left = -323.0
+margin_top = 84.0
+margin_right = -150.0
+margin_bottom = 200.0
+rect_rotation = -20.0
+border_color = Color( 0, 0, 1, 1 )
+border_width = 5.0
+editor_only = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Jump_punch"]
+anims/Jump_punch = SubResource( 18 )
+
+[node name="fireballAnim" type="Node2D" parent="."]
+scale = Vector2( 1.5, 1.5 )
+z_index = 2
+
+[node name="fireballAnimation" type="AnimationPlayer" parent="fireballAnim"]
+root_node = NodePath("../..")
+anims/RESET = SubResource( 13 )
+anims/fire = SubResource( 12 )
+
+[node name="ColorRect" type="ColorRect" parent="fireballAnim"]
+visible = false
+margin_left = 70.0
+margin_top = -70.0
+margin_right = 210.0
+margin_bottom = 70.0
+rect_scale = Vector2( 1e-05, 1 )
+color = Color( 0.972549, 0.486275, 0.0980392, 0.588235 )
+
+[node name="ReferenceRect" type="ReferenceRect" parent="fireballAnim"]
+visible = false
+margin_left = -70.0
+margin_top = -70.0
+margin_right = 70.0001
+margin_bottom = 70.0001
+border_color = Color( 0.972549, 0.486275, 0.0980392, 1 )
+border_width = 5.0
+editor_only = false
+
+[connection signal="area_entered" from="HurtBox" to="." method="_on_HurtBox_area_entered"]
+[connection signal="area_entered" from="HurtBox" to="HurtBox" method="_on_HurtBox_area_entered"]
+[connection signal="area_entered" from="BlockBox" to="." method="_on_BlockBox_area_entered"]
