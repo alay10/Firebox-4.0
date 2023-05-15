@@ -1,8 +1,0 @@
-
-The command used for generating sprint commit files is as such:
-
-
-for file in $(git ls-files); do git blame --since=14.days $file | grep -v '^\^' | grep $(GIT_USERNAME) >> sprint2/$(GIT_USERNAME).commits.txt; done
-
-
-Copy and paste the line into the terminal
